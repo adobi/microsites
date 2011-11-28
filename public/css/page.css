@@ -1,0 +1,31 @@
+.tabs a {
+    border:1px solid #ddd!important;
+}
+.tabs span, .pills span {
+    font-weight:bold;
+    position:relative;
+    top:10px;
+    padding: 0 10px;
+    display:inline-block;
+    color:#000;
+}
+#main-nav li a {
+    border:0px!important;
+}
+
+#main-nav .active a {
+    border:1px solid #ddd !important;
+    border-bottom:0px!important;
+}
+
+.item {
+    background:#eee; padding:5px;width:930px;
+    border-radius: 5px;
+}
+
+.item-nav {
+    text-align: right;
+}
+    .item-nav a {
+        margin-right:10px;
+    }
