@@ -21,6 +21,7 @@
 .item {
     background:#eee; padding:5px;width:930px;
     border-radius: 5px;
+    margin-top:10px;
 }
 
 .item-nav {
@@ -29,3 +30,15 @@
     .item-nav a {
         margin-right:10px;
     }
+    
+#upload-image-form {
+    margin-bottom:0px!important;
+}
+
+#rate-star {
+    margin-top:8px;
+}
+
+.star {
+    display:inline-block;
+}

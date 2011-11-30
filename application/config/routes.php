@@ -38,10 +38,10 @@
 |
 */
 
-$route['default_controller'] = "site";
+$route['default_controller'] = "microsite";
 $route['404_override'] = '';
 
-$route['site/(:any)'] = 'microsite/index/$1';
+$route['site/(:any)'] = 'microsite/show/$1';
 
 
 /* End of file routes.php */

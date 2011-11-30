@@ -34,11 +34,18 @@
             </div>
         </div>
         <div class="clearfix">
+            <label for="background_color">Background color</label>
+            <div class="input">
+                <input type="text" name = "background_color" id = "background_color" class = "small" value = "<?php echo $item ? $item->background_color : '' ?>"/>
+                <div id="colorpicker"></div>
+            </div>
+        </div>        
+        <div class="clearfix">
             <label for="background_image">Background image</label>
             <div class="input">
                 <?php if ($item && $item->background_image): ?>
                     <div class="media-grid">
-                        <a href="#">
+                        <a href="#" class="media-a">
                             <img src="<?php echo base_url() ?>uploads/<?php echo $item->background_image ?>" alt="" class="thumbnail"/>
                         </a>
                     </div>
