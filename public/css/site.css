@@ -1,0 +1,12 @@
+.content {
+     min-height:850px;
+     height:auto;
+}
+
+.site-title {
+    text-align:center;
+}
+
+.pills a {
+    text-shadow:none;
+}
