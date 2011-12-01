@@ -24,6 +24,11 @@ class Site extends MY_Controller
         
         $data['site'] = current($this->site->fetchByUrl($this->uri->segment(2)));
         
+        if ($data['site']) {
+            
+            $data['images'] = $this->image->fetchForSite($data['site']->id);
+        }
+        
         $this->template->build('site/show', $data);
     }
 }

@@ -6,9 +6,29 @@
         
         <link rel = "stylesheet" href="<?= base_url() ?>css/bootstrap.min.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>css/site.css" media="all" />
+        
         <script src = "http://code.jquery.com/jquery-1.7.min.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
+        
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/default/default.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/pascal/pascal.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/orman/orman.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/nivo-slider.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.nivo.slider.js"></script>        
+
+        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/chocoslider.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.chocoslider.js"></script>        
+        
+        <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
+        <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
+        
+        <script type="text/javascript">
+            BASE_URL = "<?php echo base_url() ?>";
+        </script>
+        
     </head>
     
     <?php if ($site): ?>
@@ -41,21 +61,36 @@
                 background:#cc6702;
             }
             
-            #images {
-                background:red;
-                height:300px;
+            #images, #videos {
+                height:180px;
+                width:420px;
+                margin:0 auto;
             }
             
             #videos {
-                background:green;
-                height:300px;
+                background-color:green;
             }
             
+            #images {
+                background:red;
+            }
+            
+            #images a {
+                display:block;
+                
+            }
+       
         </style>
-        
         <script type="text/javascript">
             $(function() {
-                $('.pills').pills()
+                $('.pills').pills();
+                
+                //$('#slider').nivoSlider();
+
+                $('#images').chocoslider({auto:true});
+                
+                $("[rel=fancybox]").fancybox();                
+                
             })
         </script>
         
@@ -80,11 +115,21 @@
         	    </ul>
         	    <div class="pill-content">
             	    <div id="images" class="span8 active">
-            	        
+                	        <?php if (isset($images)): ?>
+                    	            <?php foreach ($images as $item): ?>
+                    	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                        	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "">
+                        	            </a>
+                    	            <?php endforeach ?>
+                	        <?php endif ?>
+            	    </div>
+            	    <div id="videos" class="span8">
+            	        <?php if (isset($videos)): ?>
+            	            <?php foreach ($videos as $item): ?>
+            	                img
+            	            <?php endforeach ?>
+            	        <?php endif ?>
             	    </div>
             	    
-            	    <div id="videos" class="span8">
-            	        
-            	    </div>
             	</div>
     <?php endif ?>            
