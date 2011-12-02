@@ -12,7 +12,8 @@
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
         
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-
+        
+        <!-- 
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/default/default.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/pascal/pascal.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/orman/orman.css" type="text/css" media="screen" />
@@ -21,6 +22,12 @@
 
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/chocoslider.css" type="text/css" media="screen" />
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.chocoslider.js"></script>        
+         -->
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>scripts/plugins/diapo/diapo.css" />
+        
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/diapo.js"></script>
         
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
         <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
@@ -42,15 +49,15 @@
             }
             
             .site-title {
-                padding-top:130px;
+                padding-top:80px;
             }
             
             .site-title h4 {
-                padding:5px; color:#eee;
+                padding:5px; color:#000;
             }
             .pills {
-                margin-left:10px;
-                margin-top:50px;
+                margin-left:20px;
+                margin-top:20px;
             }
             .pills li a, .pills li a:hover {
                 background:#ff7f00;
@@ -61,23 +68,27 @@
                 background:#cc6702;
             }
             
-            #images, #videos {
-                height:180px;
-                width:420px;
+            #images, #videos, .pix_diapo {
+                height:340px;
+                width:450px;
                 margin:0 auto;
             }
             
             #videos {
-                background-color:green;
+                
             }
             
             #images {
-                background:red;
+                
             }
             
             #images a {
                 display:block;
                 
+            }
+            
+            #pix_pag {
+                width:450px;
             }
        
         </style>
@@ -87,7 +98,10 @@
                 
                 //$('#slider').nivoSlider();
 
-                $('#images').chocoslider({auto:true});
+                //$('#images').chocoslider({auto:true});
+                
+                $('#images .pix_diapo, #videos .pix_diapo').diapo({fx: 'simpleFade'});
+                $('#images .pix_diapo, #videos .pix_diapo').diapoStop();
                 
                 $("[rel=fancybox]").fancybox();                
                 
@@ -104,7 +118,7 @@
         </div>
     <?php else: ?>
         <div class="container span8" id="top">
-        	<div class="content span8">
+        	<div class="content">
         	    <div class="span8 site-title">
         	        <h4 style=""><?php echo $site->title ?></h4>
         	    </div>
@@ -115,20 +129,37 @@
         	    </ul>
         	    <div class="pill-content">
             	    <div id="images" class="span8 active">
+            	        <div class="pix_diapo">
                 	        <?php if (isset($images)): ?>
                     	            <?php foreach ($images as $item): ?>
+                    	                <!-- 
                     	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                         	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "">
                         	            </a>
+                        	             -->
+                                        <div data-thumb="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" >
+                        	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                            	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                            	            </a>
+                                            <div class="caption elemHover fromLeft">Képfelirat</div>
+                                        </div>                        	            
                     	            <?php endforeach ?>
+
                 	        <?php endif ?>
+                	    </div>
             	    </div>
             	    <div id="videos" class="span8">
-            	        <?php if (isset($videos)): ?>
-            	            <?php foreach ($videos as $item): ?>
-            	                img
-            	            <?php endforeach ?>
-            	        <?php endif ?>
+            	        <div class="pix_diapo">
+                	        <?php //if (isset($videos)): ?>
+                    	            <?php //foreach ($videos as $item): ?>
+                                        <div data-thumb="<?php echo base_url() ?>uploads/up-official-trailer-fake.jpg" >
+                        	                <iframe width="450" height="350" src="http://www.youtube.com/embed/qas5lWp7_R0?wmode=transparent&autoplay=1" data-fake="<?php echo base_url() ?>uploads/up-official-trailer-fake.jpg" frameborder="0" allowfullscreen></iframe>
+                                            <div class="caption elemHover fromLeft">Képfelirat</div>
+                                        </div>                        	            
+                    	            <?php //endforeach ?>
+
+                	        <?php //endif ?>
+                	    </div>
             	    </div>
             	    
             	</div>

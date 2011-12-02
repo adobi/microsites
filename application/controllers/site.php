@@ -27,6 +27,7 @@ class Site extends MY_Controller
         if ($data['site']) {
             
             $data['images'] = $this->image->fetchForSite($data['site']->id);
+            $data['videos'] = $this->video->fetchForSite($data['site']->id);
         }
         
         $this->template->build('site/show', $data);
