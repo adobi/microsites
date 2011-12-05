@@ -69,7 +69,11 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background: #111;
+    border-radius:5px;	
+    -moz-box-shadow: 0 0 5px 8px #888;
+    -webkit-box-shadow: 0 0 5px 8px#888;
+    box-shadow: 0 0 5px 8px #888;
 }
 
 #fancybox-content {
@@ -80,7 +84,9 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1102;
-	border: 0px solid #fff;
+	border: 0px solid #111;
+    border-radius:5px;	
+	
 }
 
 #fancybox-hide-sel-frame {
@@ -194,6 +200,7 @@
 	height: 20px;
 	z-index: 1001;
 }
+/*
 
 #fancybox-bg-n {
 	top: -20px;
@@ -252,7 +259,7 @@
 	background-image: url('fancybox.png');
 	background-position: -40px -122px;
 }
-
+*/
 #fancybox-title {
 	font-family: Helvetica;
 	font-size: 12px;

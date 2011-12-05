@@ -18,3 +18,44 @@
 .choco-controlNavigation {
     bottom:-40px!important;
 }
+
+.slides_container {
+    width:450px;
+    height:340px;
+}
+.slides_container div {
+    width:450px;
+    height:340px;
+    display:block;
+}      
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding:0px;
+	padding-top:12px;
+	background-image:url('http://slidesjs.com/img/pagination.png');
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+	
+}
+
+.pagination li a:hover {
+    background-color:transparent;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}    

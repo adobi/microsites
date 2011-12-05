@@ -11,8 +11,6 @@
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
         
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-        
         <!-- 
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/default/default.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/pascal/pascal.css" type="text/css" media="screen" />
@@ -22,16 +20,22 @@
 
         <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/chocoslider.css" type="text/css" media="screen" />
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.chocoslider.js"></script>        
-         -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>scripts/plugins/diapo/diapo.css" />
-        
+
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.hoverIntent.minified.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/diapo.js"></script>
-        
+         -->
+         
+        <!-- 
+        <link rel="stylesheet" type="text/css" media="screen" href="http://projects.craftedpixelz.co.uk/craftyslide/css/craftyslide.css" />
+        <script type="text/javascript" src = "http://projects.craftedpixelz.co.uk/craftyslide/js/craftyslide.min.js"></script>
+         -->
+        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/slidesjs/slides.jquery.js"></script>
+         
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
         <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
-        
+
         <script type="text/javascript">
             BASE_URL = "<?php echo base_url() ?>";
         </script>
@@ -90,6 +94,8 @@
             #pix_pag {
                 width:450px;
             }
+            
+           
        
         </style>
         <script type="text/javascript">
@@ -100,8 +106,13 @@
 
                 //$('#images').chocoslider({auto:true});
                 
-                $('#images .pix_diapo, #videos .pix_diapo').diapo({fx: 'simpleFade'});
-                $('#images .pix_diapo, #videos .pix_diapo').diapoStop();
+                //$('#images .pix_diapo, #videos .pix_diapo').diapo({fx: 'simpleFade'});
+                //$('#images .pix_diapo, #videos .pix_diapo').diapoStop();
+                
+                $('#images, #videos').slides({
+                    'width': 450,
+                    'height': 350,                    
+                });
                 
                 $("[rel=fancybox]").fancybox();                
                 
@@ -129,7 +140,7 @@
         	    </ul>
         	    <div class="pill-content">
             	    <div id="images" class="span8 active">
-            	        <div class="pix_diapo">
+            	        <div class="slides_container">
                 	        <?php if (isset($images)): ?>
                     	            <?php foreach ($images as $item): ?>
                     	                <!-- 
@@ -137,29 +148,40 @@
                         	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "">
                         	            </a>
                         	             -->
+                        	             <!-- 
                                         <div data-thumb="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" >
                         	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                             	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
                             	            </a>
                                             <div class="caption elemHover fromLeft">Képfelirat</div>
-                                        </div>                        	            
+                                        </div>
+                                        <li>
+                                            <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                                                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                            </a>
+                                        </li>
+                                         -->   
+                                        <div>
+                                            <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                                                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                            </a>
+                                        </div>                                                              	            
                     	            <?php endforeach ?>
 
                 	        <?php endif ?>
                 	    </div>
             	    </div>
             	    <div id="videos" class="span8">
-            	        <div class="pix_diapo">
-                	        <?php //if (isset($videos)): ?>
-                    	            <?php //foreach ($videos as $item): ?>
-                                        <div data-thumb="<?php echo base_url() ?>uploads/up-official-trailer-fake.jpg" >
-                        	                <iframe width="450" height="350" src="http://www.youtube.com/embed/qas5lWp7_R0?wmode=transparent&autoplay=1" data-fake="<?php echo base_url() ?>uploads/up-official-trailer-fake.jpg" frameborder="0" allowfullscreen></iframe>
-                                            <div class="caption elemHover fromLeft">Képfelirat</div>
-                                        </div>                        	            
-                    	            <?php //endforeach ?>
+            	        <div class="slides_container">
+                	        <?php if (isset($videos)): ?>
+                    	            <?php foreach ($videos as $item): ?>
+                                        <div>
+                                            <iframe width="450" height="330" src="http://www.youtube.com/embed/qas5lWp7_R0?wmode=transparent&autoplay=0" frameborder="0" allowfullscreen></iframe>                                        
+                                        </div>                                                              	            
+                    	            <?php endforeach ?>
 
-                	        <?php //endif ?>
-                	    </div>
+                	        <?php endif ?>
+                	    <!-- </div> -->
             	    </div>
             	    
             	</div>
