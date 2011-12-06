@@ -29,17 +29,17 @@
     height:340px;
     width:450px;
     margin:0 auto;
-    margin-top:70px;
+    margin-top:60px;
 }
 
 
 .slides_container {
     width:450px;
-    height:340px;
+    height:350px;
 }
 .slides_container div {
     width:450px;
-    height:340px;
+    height:350px;
     display:block;
 }      
 

@@ -19,9 +19,10 @@
 }
 
 .item {
-    background:#eee; padding:5px;width:930px;
+    background:#eee; padding:5px;//width:930px;
     border-radius: 5px;
     margin-top:10px;
+    width:450px!important;margin-right:10px!important; margin-left:0px!important;
 }
 
 .item-nav {

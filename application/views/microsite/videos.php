@@ -20,6 +20,7 @@
             <label for="video">Embed code</label>
             <div class="input">
                 <textarea rows="3" name="video" id="video" class="xxlarge"></textarea>
+                <span class="help-block">Set the video size to 450x350.</span>
             </div>
         </div>
             
@@ -30,9 +31,9 @@
 </fieldset>
 
 <?php if ($items): ?>
-    <fieldset>
+    <fieldset class="row" style="margin-left:0px;">
         <?php foreach ($items as $item): ?>
-            <div class="span16 item">
+            <div class="span8 item">
                 <h4 class = "title"><?php echo $item->title ?></h4>
                 <div class="video"><?php echo htmlspecialchars_decode($item->video) ?></div>
                 <p class="item-nav">

@@ -42,8 +42,12 @@
                 //$('.pills').pills();
 
                 $('#slideshow').slides({
-                    'width': 450,
-                    'height': 350,                    
+                    width: 450,
+                    height: 350,
+                    //play: 5000,
+                    //pause: 2500,  
+                    effect: 'slide, fade',
+                    hoverPause: true                                      
                 });
                 
                 $("[rel=fancybox]").fancybox();    
