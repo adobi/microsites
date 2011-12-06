@@ -11,26 +11,7 @@
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
         
-        <!-- 
-        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/default/default.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/pascal/pascal.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/themes/orman/orman.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/nivo-slider.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.nivo.slider.js"></script>        
 
-        <link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/galleria/chocoslider.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/galleria/jquery.chocoslider.js"></script>        
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>scripts/plugins/diapo/diapo.css" />
-
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/jquery.hoverIntent.minified.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/diapo/scripts/diapo.js"></script>
-         -->
-         
-        <!-- 
-        <link rel="stylesheet" type="text/css" media="screen" href="http://projects.craftedpixelz.co.uk/craftyslide/css/craftyslide.css" />
-        <script type="text/javascript" src = "http://projects.craftedpixelz.co.uk/craftyslide/js/craftyslide.min.js"></script>
-         -->
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/slidesjs/slides.jquery.js"></script>
          
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
@@ -49,20 +30,22 @@
                 background: <?php echo $site->background_color ?>
             }
             .content {
-                background:url('<?php echo base_url() ?>uploads/<?php echo $site->background_image ?>') no-repeat transparent;
+                background-image:url('<?php echo base_url() ?>uploads/<?php echo $site->background_image ?>');
+                background-color: <?php echo $site->background_color ?>;
+                
             }
-            
+            .site-header {
+                width:510px;
+                height:120px;
+            }            
             .site-title {
-                padding-top:80px;
+                //padding-top:120px;
+                width:510px;
+                height:60px; 
+                //background:#aaa;  
+                margin-top:30px;             
             }
             
-            .site-title h4 {
-                padding:5px; color:#000;
-            }
-            .pills {
-                margin-left:20px;
-                margin-top:20px;
-            }
             .pills li a, .pills li a:hover {
                 background:#ff7f00;
                 color:#fff;
@@ -72,43 +55,11 @@
                 background:#cc6702;
             }
             
-            #images, #videos, .pix_diapo {
-                height:340px;
-                width:450px;
-                margin:0 auto;
-            }
-            
-            #videos {
-                
-            }
-            
-            #images {
-                
-            }
-            
-            #images a {
-                display:block;
-                
-            }
-            
-            #pix_pag {
-                width:450px;
-            }
-            
-           
-       
         </style>
         <script type="text/javascript">
             $(function() {
                 $('.pills').pills();
-                
-                //$('#slider').nivoSlider();
 
-                //$('#images').chocoslider({auto:true});
-                
-                //$('#images .pix_diapo, #videos .pix_diapo').diapo({fx: 'simpleFade'});
-                //$('#images .pix_diapo, #videos .pix_diapo').diapoStop();
-                
                 $('#images, #videos').slides({
                     'width': 450,
                     'height': 350,                    
@@ -122,67 +73,3 @@
     <?php endif ?>
     
     <body>    
-        
-    <?php if (!$site): ?>
-        <div class="container">
-            <img src="<?php echo base_url() ?>images/404.jpg" alt="">
-        </div>
-    <?php else: ?>
-        <div class="container span8" id="top">
-        	<div class="content">
-        	    <div class="span8 site-title">
-        	        <h4 style=""><?php echo $site->title ?></h4>
-        	    </div>
-        	    
-        	    <ul class="pills" data-tabs="tabs">
-        	        <li><a href="#images">Images</a></li>
-        	        <li><a href="#videos">Videos</a></li>
-        	    </ul>
-        	    <div class="pill-content">
-            	    <div id="images" class="span8 active">
-            	        <div class="slides_container">
-                	        <?php if (isset($images)): ?>
-                    	            <?php foreach ($images as $item): ?>
-                    	                <!-- 
-                    	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                        	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "">
-                        	            </a>
-                        	             -->
-                        	             <!-- 
-                                        <div data-thumb="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" >
-                        	                <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                            	                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                            	            </a>
-                                            <div class="caption elemHover fromLeft">Képfelirat</div>
-                                        </div>
-                                        <li>
-                                            <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                                                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                                            </a>
-                                        </li>
-                                         -->   
-                                        <div>
-                                            <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                                                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                                            </a>
-                                        </div>                                                              	            
-                    	            <?php endforeach ?>
-
-                	        <?php endif ?>
-                	    </div>
-            	    </div>
-            	    <div id="videos" class="span8">
-            	        <div class="slides_container">
-                	        <?php if (isset($videos)): ?>
-                    	            <?php foreach ($videos as $item): ?>
-                                        <div>
-                                            <iframe width="450" height="330" src="http://www.youtube.com/embed/qas5lWp7_R0?wmode=transparent&autoplay=0" frameborder="0" allowfullscreen></iframe>                                        
-                                        </div>                                                              	            
-                    	            <?php endforeach ?>
-
-                	        <?php endif ?>
-                	    <!-- </div> -->
-            	    </div>
-            	    
-            	</div>
-    <?php endif ?>            

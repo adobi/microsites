@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+    	<title>Microsites</title>
+        <meta charset="utf-8">
+        
+        <link rel = "stylesheet" href="public/css/bootstrap.min.css" media="all" />
+        
+        <style type="text/css">
+            .content {
+                width: 510px;
+                height: 800px;
+                background: url('http://placehold.it/510x800&text=content(510x)') no-repeat transparent;
+            }
+            .site-header {
+                width:510px;
+                height:120px;
+                background: url('http://placehold.it/510x120/E8117F&text=header(510x120)') no-repeat transparent;
+            }
+            .site-title {
+                width:510px;
+                height:60px;
+                background: url('http://placehold.it/510x60/F7B4D5&text=title(510x60)') no-repeat transparent;
+            }
+
+            #images, #videos {
+                height:340px;
+                width:450px;  
+                margin:0 auto;              
+            }
+            
+            #images {
+                background: url('http://placehold.it/450x340/E8117F&text=images(450x340)') no-repeat transparent;
+            }
+            #videos {
+                background: url('http://placehold.it/450x340/E8117F&text=videos(450x340)') no-repeat transparent;
+            }
+            
+            .pill-content {
+                background:#F7B4D5;
+                width:460px;
+                height: 340px;
+                padding:10px;
+                margin:0 auto;
+            }
+            
+            .reviews {
+                margin-top:20px;
+            }
+            
+        </style>
+        
+        <script src = "http://code.jquery.com/jquery-1.7.min.js"></script>
+        <script src = "public/scripts/plugins/bootstrap-dropdown.js"></script>
+        <script src = "public/scripts/plugins/bootstrap-tabs.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('.pills').pills();
+                /*
+                $('#images, #videos').slides({
+                    'width': 450,
+                    'height': 350,                    
+                });
+                
+                $("[rel=fancybox]").fancybox();                
+                */
+            })
+        </script>        
+    </head>
+    <body>          
+        
+        <div class="container span8" id="top">
+        	<div class="content"> 
+        	    <div class="span8 site-header"></div>       
+        	    
+        	    <div class="span8 site-title">
+        	        <h4 style=""></h4>
+        	    </div>        	    
+        	    <ul class="pills" data-tabs="tabs">
+        	        <li class="active"><a href="#images">Images</a></li>
+        	        <li><a href="#videos">Videos</a></li>
+        	    </ul>
+        	    
+        	    <div class="pill-content">
+        	        <div class="active" id="images"></div>
+        	        <div id="videos"></div>
+            	</div>
+                <div class="span8 reviews">
+                    <h4>Reviews</h4>
+                </div>
+            </div> <!-- /content -->   
+
+        
+        </div> <!-- /container -->
+        
+    </body>
+</html>                    	
