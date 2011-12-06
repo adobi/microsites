@@ -31,7 +31,7 @@
 </fieldset>
 
 <?php if ($items): ?>
-    <fieldset class="row" style="margin-left:0px;">
+    <fieldset id="video-items" class="row" style="margin-left:0px; text-align:center">
         <?php foreach ($items as $item): ?>
             <div class="span8 item">
                 <h4 class = "title"><?php echo $item->title ?></h4>

@@ -11,7 +11,7 @@
         	    </div>
         	    <div id="slideshow" class="span8 active">
         	        <div class="slides_container">
-            	        <?php if (isset($videos)): ?>
+            	        <?php if (isset($videos) && $videos): ?>
                 	            <?php foreach ($videos as $item): ?>
                                     <div>
                                         <?php echo htmlspecialchars_decode($item->video) ?>
@@ -19,7 +19,7 @@
                 	            <?php endforeach ?>
 
             	        <?php endif ?>
-            	        <?php if (isset($images)): ?>
+            	        <?php if (isset($images) && $images): ?>
                 	            <?php foreach ($images as $item): ?>
                                     <div>
                                         <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
@@ -31,7 +31,8 @@
             	        <?php endif ?>
             	    </div>
         	    </div>
-            	<?php if (isset($reviews)): ?>
+            	<?php if (isset($reviews) && $reviews): ?>
+            	    
                 	<div class="span8 reviews">
                 	    <h4>Reviews</h4>
                 	    <?php foreach ($reviews as $item): ?>
