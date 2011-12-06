@@ -16,7 +16,8 @@
          
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
         <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
-
+        <script src="<?php echo base_url(); ?>scripts/plugins/raty/js/jquery.raty.min.js"></script>    	    
+        
         <script type="text/javascript">
             BASE_URL = "<?php echo base_url() ?>";
         </script>
@@ -34,38 +35,28 @@
                 background-color: <?php echo $site->background_color ?>;
                 
             }
-            .site-header {
-                width:510px;
-                height:120px;
-            }            
-            .site-title {
-                //padding-top:120px;
-                width:510px;
-                height:60px; 
-                //background:#aaa;  
-                margin-top:30px;             
-            }
-            
-            .pills li a, .pills li a:hover {
-                background:#ff7f00;
-                color:#fff;
-            }
-            
-            .pills li a:hover, .pills .active a {
-                background:#cc6702;
-            }
             
         </style>
         <script type="text/javascript">
             $(function() {
-                $('.pills').pills();
+                //$('.pills').pills();
 
-                $('#images, #videos').slides({
+                $('#slideshow').slides({
                     'width': 450,
                     'height': 350,                    
                 });
                 
-                $("[rel=fancybox]").fancybox();                
+                $("[rel=fancybox]").fancybox();    
+                
+                $('.star').each(function(i, v) {
+        	        var self = $(v);
+        	        
+        	        self.raty({
+        	            path: App.URL + 'scripts/plugins/raty/img/',
+        	            start: self.attr('data-rate'), 
+        	            readOnly:true
+                    });
+        	    });                            
                 
             })
         </script>

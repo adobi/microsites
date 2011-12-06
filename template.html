@@ -24,17 +24,17 @@
             }
 
             #images, #videos {
-                height:340px;
-                width:450px;  
-                margin:0 auto;              
+             
             }
             
-            #images {
+            #slideshow {
                 background: url('http://placehold.it/450x340/E8117F&text=images(450x340)') no-repeat transparent;
+                height:340px;
+                width:450px;  
+                margin:0 auto; 
+    
             }
-            #videos {
-                background: url('http://placehold.it/450x340/E8117F&text=videos(450x340)') no-repeat transparent;
-            }
+
             
             .pill-content {
                 background:#F7B4D5;
@@ -76,15 +76,8 @@
         	    <div class="span8 site-title">
         	        <h4 style=""></h4>
         	    </div>        	    
-        	    <ul class="pills" data-tabs="tabs">
-        	        <li class="active"><a href="#images">Images</a></li>
-        	        <li><a href="#videos">Videos</a></li>
-        	    </ul>
+        	    <div id="slideshow"></div>
         	    
-        	    <div class="pill-content">
-        	        <div class="active" id="images"></div>
-        	        <div id="videos"></div>
-            	</div>
                 <div class="span8 reviews">
                     <h4>Reviews</h4>
                 </div>

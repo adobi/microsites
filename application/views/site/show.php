@@ -9,40 +9,28 @@
         	    <div class="span8 site-title">
         	        <h3 style=""><?php echo $site->title ?></h3>
         	    </div>
-        	    
-        	    <ul class="pills" data-tabs="tabs">
-        	        <li><a href="#images">Images</a></li>
-        	        <li><a href="#videos">Videos</a></li>
-        	    </ul>
-        	    <div class="pill-content">
-            	    <div id="images" class="span8 active">
-            	        <div class="slides_container">
-                	        <?php if (isset($images)): ?>
-                    	            <?php foreach ($images as $item): ?>
-                                        <div>
-                                            <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                                                <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                                            </a>
-                                        </div>                                                              	            
-                    	            <?php endforeach ?>
+        	    <div id="slideshow" class="span8 active">
+        	        <div class="slides_container">
+            	        <?php if (isset($videos)): ?>
+                	            <?php foreach ($videos as $item): ?>
+                                    <div>
+                                        <?php echo htmlspecialchars_decode($item->video) ?>
+                                    </div>                                                              	            
+                	            <?php endforeach ?>
 
-                	        <?php endif ?>
-                	    </div>
-            	    </div>
-            	    <div id="videos" class="span8">
-            	        <div class="slides_container">
-                	        <?php if (isset($videos)): ?>
-                    	            <?php foreach ($videos as $item): ?>
-                                        <div>
-                                            <?php echo htmlspecialchars_decode($item->video) ?>
-                                        </div>                                                              	            
-                    	            <?php endforeach ?>
+            	        <?php endif ?>
+            	        <?php if (isset($images)): ?>
+                	            <?php foreach ($images as $item): ?>
+                                    <div>
+                                        <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                                            <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                        </a>
+                                    </div>                                                              	            
+                	            <?php endforeach ?>
 
-                	        <?php endif ?>
-                	    </div>
+            	        <?php endif ?>
             	    </div>
-            	    
-            	</div> <!-- pill-content -->
+        	    </div>
             	<?php if (isset($reviews)): ?>
                 	<div class="span8 reviews">
                 	    <h4>Reviews</h4>
@@ -54,10 +42,6 @@
                                 </h4>
                                 
                                 <div class="description"><?php echo htmlspecialchars_decode($item->description) ?></div>
-                                <p class="item-nav">
-                                    <a href="#" class="edit-review" data-id = "<?php echo $item->id ?>">edit</a>
-                                    <a href="<?php echo base_url() ?>microsite/delete_review/<?php echo $item->id ?>">delete</a>
-                                </p>
                             </div>            	        
                 	    <?php endforeach ?>
                 	</div>    

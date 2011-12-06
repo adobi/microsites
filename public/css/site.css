@@ -8,11 +8,16 @@
      background-repeat: no-repeat;
 }
 
+.site-header {
+    width:510px;
+    height:120px;
+
+}
+
 .site-title {
     text-align:center;
     width:510px;
     height:60px; 
-    margin-top:30px;        
 }
 
 .site-title h3 {
@@ -20,19 +25,11 @@
     padding-left:20px;
 }
 
-.pills {
-    margin-left:20px;
-    margin-top:-25px;
-}
-
-.pills a {
-    text-shadow:none;
-}
-
-#images, #videos {
+#slideshow {
     height:340px;
     width:450px;
     margin:0 auto;
+    margin-top:70px;
 }
 
 
@@ -80,4 +77,9 @@
 
 .reviews {
     width:510px;
+    clear:both;
+}
+
+.star {
+    display:inline-block;
 }
