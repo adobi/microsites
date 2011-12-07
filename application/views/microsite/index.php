@@ -13,6 +13,7 @@
                 <p class="item-nav">
                     <a href="<?php echo base_url() ?>s/<?php echo $item->url ?>" target = "_blank"><strong>preview</strong></a>
 
+                    <a href="<?php echo base_url() ?>microsite/stores/<?php echo $item->id ?>">stores</a>
                     <a href="<?php echo base_url() ?>microsite/reviews/<?php echo $item->id ?>">reviews</a>
                     <a href="<?php echo base_url() ?>microsite/images/<?php echo $item->id ?>">images</a>
                     <a href="<?php echo base_url() ?>microsite/videos/<?php echo $item->id ?>">videos</a>

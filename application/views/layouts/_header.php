@@ -20,7 +20,7 @@
         
     <div id="fb-root"></div>	
     
-    <div class="container <?php echo in_array($this->uri->segment(1), array('microsite', 'review')) ? 'span16' : 'span8' ?>" id="top">
+    <div class="container <?php echo in_array($this->uri->segment(1), array('microsite', 'review', 'storetype')) ? 'span16' : 'span8' ?>" id="top">
     	<div class="content">
         <?php //if ($this->session->userdata('logged_in') && $this->uri->segment(1) === 'manage'): ?>
             
@@ -30,8 +30,12 @@
                     <li class="<?php echo in_array($this->uri->segment(1), array('microsite', 'review')) ? 'active' : '' ?>">
                         <a href="<?php echo base_url() ?>microsite">Sites</a>
                     </li>
+					<li <?php echo $this->uri->segment(1) === 'storetype' ? 'class = "active"' : '' ?>>
+						<a href="<?php echo base_url() ?>storetype">Stores</a>
+					</li>
+                    
 					<li <?php echo $this->uri->segment(2) === 'logout' ? 'class = "active"' : '' ?>>
-						<a href="<?php echo base_url() ?>manage/logout">Logout</a>
+						<a href="<?php echo base_url() ?>">Logout</a>
 					</li>
                 </ul>
             </div>

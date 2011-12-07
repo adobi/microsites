@@ -7,7 +7,7 @@
     <h3 style="margin-bottom:18px"><?php echo $site->name ?> reviews</h3>
 <?php endif ?>
 
-<p><a href="<?php echo base_url() ?>review/edit/site/<?php echo $site->id ?>">add new review</a></p>
+<p><a href="<?php echo base_url() ?>review/edit/site/<?php echo $site->id ?>">Create new review</a></p>
 
 <?php if ($items): ?>
     <fieldset>

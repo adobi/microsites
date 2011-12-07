@@ -265,6 +265,18 @@ class Microsite extends MY_Controller
         redirect($_SERVER['HTTP_REFERER']);
     }
     
+    public function stores() 
+    {
+        $id = $this->uri->segment(3);
+        $data = array();
+        
+        $this->load->model('Stores', 'model');
+        
+        $data['items'] = $this->model->fetchAll();
+        
+        $this->template->build('microsite/stores', $data);
+    }
+    
     private function _deleteImage($id, $withRecord = false) 
     {
         $this->load->model('Microsites', 'model');

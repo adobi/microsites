@@ -29,7 +29,7 @@
     width:450px!important;
 }
 
-#video-items .item:nth-child(even) {
+#video-items .item:nth-child(even), .store-items .item:nth-child(even) {
     float:right!important;
     margin-right:0px!important;
 }

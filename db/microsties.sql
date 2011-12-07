@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50516
 File Encoding         : 65001
 
-Date: 2011-12-07 16:03:47
+Date: 2011-12-07 17:30:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,14 +59,16 @@ CREATE TABLE `review` (
   `site_id` int(11) DEFAULT NULL,
   `press` varchar(255) DEFAULT NULL,
   `press_logo` varchar(255) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `order` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of review
 -- ----------------------------
-INSERT INTO `review` VALUES ('1', 'Race Of Champions Review', 'http://www.148apps.com/reviews/race-champions-review/', 'Real Racing 2 has competition on its hands. That’s the most striking thing to come to mind when looking at Race of Champions. It’s a bit of admitted hyperbole, as there’s plenty of room for two excellent racing games on the App Store, but it’s an easy way to explain that Race of Champions is rather good.', '3', '3', null, null);
-INSERT INTO `review` VALUES ('3', 'Lorem Ipsum is simply dummy text', 'http://google.com', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', '2', '4', 'Lorem Ipsum dolor', null);
+INSERT INTO `review` VALUES ('1', 'Race Of Champions Review', 'http://www.148apps.com/reviews/race-champions-review/', 'Real Racing 2 has competition on its hands. That’s the most striking thing to come to mind when looking at Race of Champions. It’s a bit of admitted hyperbole, as there’s plenty of room for two excellent racing games on the App Store, but it’s an easy way to explain that Race of Champions is rather good.', '3', '3', null, null, null, null);
+INSERT INTO `review` VALUES ('3', 'Lorem Ipsum is simply dummy text', 'http://google.com', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', '2', '4', 'Lorem Ipsum dolor', null, null, null);
 
 -- ----------------------------
 -- Table structure for `site`
@@ -93,6 +95,38 @@ CREATE TABLE `site` (
 INSERT INTO `site` VALUES ('3', 'Race Of Champion Official Mobile Game', 'roc', 'Race Of Champion Official Mobile Game Promotion Site', '1323072656_RoC_bg.png', '#000000', null, null, null, null, null);
 INSERT INTO `site` VALUES ('4', 'Greed Corp', 'greed-corp', 'Official Game', '1323251754_bg.png', '#000000', '#f7f7f7', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '#eb782d', '#111111', '#111111');
 INSERT INTO `site` VALUES ('5', 'Santa Ride', 'santa-ride', 'Santa Ride', '1323251767_bg.png', '#ffffff', '#000000', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', null, null, null);
+
+-- ----------------------------
+-- Table structure for `store`
+-- ----------------------------
+DROP TABLE IF EXISTS `store`;
+CREATE TABLE `store` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_id` int(11) DEFAULT NULL,
+  `site_id` int(11) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of store
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `store_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `store_type`;
+CREATE TABLE `store_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `logo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of store_type
+-- ----------------------------
+INSERT INTO `store_type` VALUES ('1', 'iPhone', '1323275290_iphone_store_badge.png');
 
 -- ----------------------------
 -- Table structure for `video`
