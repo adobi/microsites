@@ -23,13 +23,21 @@
 	        $('.ui-dialog').css('width', img.get(0).width + 30);
 	    }); 
 	    
-	    if ($('#colorpicker').length)
-	        $('#colorpicker').farbtastic('#background_color');
+	    
+	    if ($('#background_colorpicker').length) $('#background_colorpicker').farbtastic('#background_color');
+	    
+	    if ($('#font_colorpicker').length) $('#font_colorpicker').farbtastic('#font_color');
+	    
+	    if ($('#link_colorpicker').length) $('#link_colorpicker').farbtastic('#link_color');
+
+	    if ($('#about_colorpicker').length) $('#about_colorpicker').farbtastic('#about_background_color');
+
+	    if ($('#reviews_colorpicker').length) $('#reviews_colorpicker').farbtastic('#reviews_background_color');
 	        
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');
-	        console.log(form, item);
+	        //console.log(form, item);
 	        form.find('[name=title]').val(item.find('.title').html());
 	        form.find('[name=video]').val(item.find('.video').html());
 	        form.append($('<input />', {type: 'hidden', name: 'id', value: self.attr('data-id')}));
@@ -38,7 +46,7 @@
 	        
 	        return false;
 	    });
-	    
+	    /*
 	    $('body').delegate('.edit-review', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-review-form'), item = self.parents('.item:first');
@@ -54,10 +62,16 @@
 	        
 	        return false;
 	    });	
+	    */
 	    
-	    $('#rate-star').raty({
-	        path: App.URL + 'scripts/plugins/raty/img/',
-	        scoreName: 'rate'
+	    $('#rate-star').each(function(i, v) {
+	        var self = $(v);
+	        
+	        self.raty({
+	            path: App.URL + 'scripts/plugins/raty/img/',
+	            start: self.attr('data-rate'),
+	            scoreName: 'rate', 
+            });
 	    });
 	    
 	    $('.star').each(function(i, v) {

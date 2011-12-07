@@ -89,9 +89,8 @@
 						$this.append((i < opt.number) ? '&nbsp;' : '');
 					}
 				}
-
 				var $score = $('<input/>', { id: id + '-score', type: 'hidden', name: opt.scoreName}).appendTo($this);
-
+                
 				if (isValidStart) {
 					if (opt.start > 0) {
 						$score.val(start);

@@ -435,9 +435,9 @@
 			if (option.generatePagination) {
 				// create unordered list
 				if (option.prependPagination) {
-					elem.prepend('<ul class='+ option.paginationClass +'></ul>');
+					elem.prepend('<div class = "pagination-wrapper"><ul class='+ option.paginationClass +'></ul></div>');
 				} else {
-					elem.append('<ul class='+ option.paginationClass +'></ul>');
+					elem.append('<div class = "pagination-wrapper"><ul class='+ option.paginationClass +'></ul></div>');
 				}
 				// for each slide create a list item and link
 				control.children().each(function(){

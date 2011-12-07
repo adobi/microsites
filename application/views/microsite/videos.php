@@ -1,3 +1,8 @@
+
+<p>
+    <a class="btn success" href="<?php echo base_url() ?>microsite">&larr; Go back</a>
+</p>
+
 <fieldset>
     <?php if ($site): ?>
         <h3 style="margin-bottom:18px"><?php echo $site->name ?> videos</h3>

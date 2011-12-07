@@ -1,4 +1,10 @@
+
+<p>
+    <a href="<?php echo base_url() ?>microsite">&larr; Go back</a>
+</p>
         
+
+
 <fieldset>
     <?php if ($site): ?>
         <h3 style="margin-bottom:18px"><?php echo $site->name ?> images</h3>
@@ -81,7 +87,12 @@
             </td>
         </tr>
     </script>
-</fieldset>      
+</fieldset>   
+
+<div class = "alert-message block-message warning">
+    After you uploaded the files, please <a href="" class="btn">Reload the page</a>
+</div>
+   
 
 <?php if ($items): ?>
     

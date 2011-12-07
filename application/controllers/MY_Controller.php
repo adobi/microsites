@@ -12,18 +12,4 @@ class MY_Controller extends CI_Controller
 
         parent::__construct();
     }
-    
-    public function udid_exists() 
-    {
-        $this->load->model("Registrations", 'registration');
-        
-        if ($this->registration->udidExists($_POST['udid'])) {
-            
-            $this->form_validation->set_message('udid_exists', 'UDID already exists');
-            
-            return false;
-        }
-        
-        return true;
-    }    
 }

@@ -1,4 +1,7 @@
 
+<p>
+    <a href="<?php echo base_url() ?>microsite">&larr; Go back</a>
+</p>
 <fieldset>
     <legend>
         <?php if ($item): ?>
@@ -34,10 +37,44 @@
             </div>
         </div>
         <div class="clearfix">
+            <label for="description">Description</label>
+            <div class="input">
+                <textarea rows="3" name="description" id="description" class="xxlarge"><?php echo $item ? $item->description : '' ?></textarea>
+            </div>
+        </div>        
+        <div class="clearfix">
+            <label for="font_color">Font color</label>
+            <div class="input">
+                <input type="text" name = "font_color" id = "font_color" class = "small" value = "<?php echo $item ? ($item->font_color ? $item->font_color : '#')  : '#' ?>"/>
+                <div id="font_colorpicker"></div>
+            </div>
+        </div> 
+        <div class="clearfix">
+            <label for="link_color">Link color</label>
+            <div class="input">
+                <input type="text" name = "link_color" id = "link_color" class = "small" value = "<?php echo $item ? ($item->link_color ? $item->link_color : '#')  : '#' ?>"/>
+                <div id="link_colorpicker"></div>
+            </div>
+        </div>  
+        <div class="clearfix">
+            <label for="about_background_color">About section background color</label>
+            <div class="input">
+                <input type="text" name = "about_background_color" id = "about_background_color" class = "small" value = "<?php echo $item ? ($item->about_background_color ? $item->about_background_color : '#')  : '#' ?>"/>
+                <div id="about_colorpicker"></div>
+            </div>
+        </div> 
+        <div class="clearfix">
+            <label for="reviews_background_color">Reviews section background color</label>
+            <div class="input">
+                <input type="text" name = "reviews_background_color" id = "reviews_background_color" class = "small" value = "<?php echo $item ? ($item->reviews_background_color ? $item->reviews_background_color : '#')  : '#' ?>"/>
+                <div id="reviews_colorpicker"></div>
+            </div>
+        </div>                                
+        <div class="clearfix">
             <label for="background_color">Background color</label>
             <div class="input">
-                <input type="text" name = "background_color" id = "background_color" class = "small" value = "<?php echo $item ? $item->background_color : '#' ?>"/>
-                <div id="colorpicker"></div>
+                <input type="text" name = "background_color" id = "background_color" class = "small" value = "<?php echo $item ? ($item->background_color ? $item->background_color : '#') : '#' ?>"/>
+                <div id="background_colorpicker"></div>
             </div>
         </div>        
         <div class="clearfix">

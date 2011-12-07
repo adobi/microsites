@@ -22,10 +22,14 @@
     background:#eee; padding:5px;//width:930px;
     border-radius: 5px;
     margin-top:10px;
-    width:450px!important;margin-right:10px!important; margin-left:0px!important;
+    width:930px!important;margin-right:10px!important; margin-left:0px!important;
 }
 
-.item:nth-child(even) {
+#video-items .item {
+    width:450px!important;
+}
+
+#video-items .item:nth-child(even) {
     float:right!important;
     margin-right:0px!important;
 }

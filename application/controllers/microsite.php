@@ -274,7 +274,7 @@ class Microsite extends MY_Controller
         if ($item && $item->background_image) {
             $this->load->config('upload');
             
-            unlink($this->config->item('upload_path') . $item->background_image);
+            @unlink($this->config->item('upload_path') . $item->background_image);
         }
         
         if (!$withRecord) {

@@ -27,7 +27,7 @@
     <?php if ($site): ?>
         
         <style type="text/css">
-            body {
+            body, .container {
                 background: <?php echo $site->background_color ?>
             }
             .content {
@@ -35,6 +35,26 @@
                 background-color: <?php echo $site->background_color ?>;
                 
             }
+            
+            .content > * {
+                color: <?php echo $site->font_color ?>;
+            }
+            
+            .content a {
+                color: <?php echo $site->link_color ?>!important;
+            }
+            
+            <?php if ($site->about_background_color): ?>
+                .game-info {
+                    background: <?php echo $site->about_background_color ?>
+                }
+            <?php endif ?>
+            
+            <?php if ($site->reviews_background_color): ?>
+                .review-item {
+                    background: <?php echo $site->reviews_background_color ?>
+                }
+            <?php endif ?>
             
         </style>
         <script type="text/javascript">
@@ -47,7 +67,8 @@
                     //play: 5000,
                     //pause: 2500,  
                     effect: 'slide, fade',
-                    hoverPause: true                                      
+                    hoverPause: true,
+                    paginationClass: 'slide-pagination'                                     
                 });
                 
                 $("[rel=fancybox]").fancybox();    

@@ -6,11 +6,11 @@
         <div class="container span8" id="top">
         	<div class="content">
         	    <div class="span8 site-header"></div>
-        	    <div class="span8 site-title">
+        	    <!-- <div class="span8 site-title">
         	        <h3 style=""><?php echo $site->title ?></h3>
-        	    </div>
-        	    <div id="slideshow" class="span8 active">
-        	        <div class="slides_container">
+        	    </div> -->
+        	    <div id="slideshow" class="span8">
+        	        <div class="slides_container span8">
             	        <?php if (isset($videos) && $videos): ?>
                 	            <?php foreach ($videos as $item): ?>
                                     <div>
@@ -31,18 +31,31 @@
             	        <?php endif ?>
             	    </div>
         	    </div>
+        	    
+        	    <div class="span8 game-info">
+        	        <h3><?php echo $site->name ?></h3>
+        	        <h4><?php echo $site->title ?></h4>
+        	        <p><?php echo $site->description ?></p>
+        	    </div>
+        	    
             	<?php if (isset($reviews) && $reviews): ?>
             	    
                 	<div class="span8 reviews">
                 	    <h4>Reviews</h4>
                 	    <?php foreach ($reviews as $item): ?>
-                            <div class="span8 item">
-                                <h4 class = "title">
+                            <div class="span8 item review-item">
+                                <h5 class = "title">
                                     <div class="star" data-rate="<?php echo $item->rate ?>"></div>
                                     <a href="<?php echo $item->url ?>" target = "_blank"><?php echo $item->title ?></a>
-                                </h4>
-                                
-                                <div class="description"><?php echo htmlspecialchars_decode($item->description) ?></div>
+                                    <span class="pull-right">
+                                        <?php if ($item->press_logo): ?>
+                                            <img src="<?php echo base_url() ?>uploads/<?php echo $item->press_logo ?>" alt="<?php echo $item->press ?>" title="<?php echo $item->press ?>">
+                                        <?php endif ?>           
+                                    </span>                         
+                                </h5>
+                                <h6><?php echo $item->press ?></h6>
+
+                                <div class="span8 description"><?php echo htmlspecialchars_decode($item->description) ?></div>
                             </div>            	        
                 	    <?php endforeach ?>
                 	</div>    
