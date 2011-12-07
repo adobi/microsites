@@ -21,7 +21,7 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
     
     //echo '<pre>'; print_r($_SERVER);
     
-    $config['base_url']	= ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https' : 'http') . '://morning-leaf-2304.herokuapp.com/public/';
+    $config['base_url']	= 'https://microsites.orchestra.io/';//(@$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https' : 'http') . '://morning-leaf-2304.herokuapp.com/public/';
 }
 
 /*
