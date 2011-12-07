@@ -20,7 +20,7 @@
         
     <div id="fb-root"></div>	
     
-    <div class="container <?php echo in_array($this->uri->segment(1), array('microsite', 'review', 'storetype')) ? 'span16' : 'span8' ?>" id="top">
+    <div class="container <?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review', 'storetype')) ? 'span16' : 'span8' ?>" id="top">
     	<div class="content">
         <?php //if ($this->session->userdata('logged_in') && $this->uri->segment(1) === 'manage'): ?>
             

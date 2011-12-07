@@ -97,3 +97,7 @@
     border-radius:4px;
     padding:5px 10px;;
 }
+
+.store-icon:hover {
+    text-decoration:none;
+}

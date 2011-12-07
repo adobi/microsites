@@ -1,6 +1,6 @@
 
 <p>
-    <a class="btn success" href="<?php echo base_url() ?>microsite">&larr; Go back</a>
+    <a href="<?php echo base_url() ?>microsite">&larr; Go back</a>
 </p>
 
 <fieldset>

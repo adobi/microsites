@@ -3,13 +3,22 @@
 <p>
     <a href="<?php echo base_url() ?>storetype/">&larr; Go back</a>
 </p>
+
+<?php if (validation_errors()): ?>
+    <div class="alert-message block-message error">
+        <?php echo validation_errors() ?>
+    </div>
+<?php endif ?>
 <fieldset>
 
-    <?php if (validation_errors()): ?>
-        <div class="alert-message block-message error">
-            <?php echo validation_errors() ?>
-        </div>
-    <?php endif ?>    
+    <legend>
+        <?php if ($item): ?>
+            Edit store
+        <?php else: ?>
+            New store
+        <?php endif ?>
+    </legend>    
+        
     <?php echo form_open_multipart('', array('id'=>'edit-storetype-form')) ?>
     
         <div class="clearfix">

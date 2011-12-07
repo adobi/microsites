@@ -3,13 +3,23 @@
 <p>
     <a href="<?php echo base_url() ?>microsite/reviews/<?php echo $site ?>">&larr; Go back</a>
 </p>
-<fieldset>
 
-    <?php if (validation_errors()): ?>
-        <div class="alert-message block-message error">
-            <?php echo validation_errors() ?>
-        </div>
-    <?php endif ?>    
+
+<?php if (validation_errors()): ?>
+    <div class="alert-message block-message error">
+        <?php echo validation_errors() ?>
+    </div>
+<?php endif ?>
+<fieldset>
+ 
+    <legend>
+        <?php if ($item): ?>
+            Edit review
+        <?php else: ?>
+            New review
+        <?php endif ?>
+    </legend>    
+       
     <?php echo form_open_multipart('', array('id'=>'edit-review-form')) ?>
     
         <div class="clearfix">

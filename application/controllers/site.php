@@ -21,6 +21,7 @@ class Site extends MY_Controller
         $this->load->model('Images', 'image');
         $this->load->model('Videos', 'video');
         $this->load->model('Reviews', 'review');
+        $this->load->model('Stores', 'store');
         
         $data['site'] = current($this->site->fetchByUrl($this->uri->segment(2)));
         
@@ -29,6 +30,7 @@ class Site extends MY_Controller
             $data['images'] = $this->image->fetchForSite($data['site']->id);
             $data['videos'] = $this->video->fetchForSite($data['site']->id);
             $data['reviews'] = $this->review->fetchForSite($data['site']->id);
+            $data['stores'] = $this->store->fetchForSite($data['site']->id);
         }
         
         $this->template->build('site/show', $data);

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50516
+Source Server         : _localhost
+Source Server Version : 50508
 Source Host           : localhost:3306
-Source Database       : microsties
+Source Database       : microsites
 
 Target Server Type    : MYSQL
-Target Server Version : 50516
+Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2011-12-07 17:30:02
+Date: 2011-12-07 22:28:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -106,11 +106,15 @@ CREATE TABLE `store` (
   `site_id` int(11) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of store
 -- ----------------------------
+INSERT INTO `store` VALUES ('2', '3', '4', 'http://google.com');
+INSERT INTO `store` VALUES ('3', '5', '4', 'http://google.com');
+INSERT INTO `store` VALUES ('4', '8', '4', 'http://google.com');
+INSERT INTO `store` VALUES ('6', '9', '4', 'http://google.com');
 
 -- ----------------------------
 -- Table structure for `store_type`
@@ -121,12 +125,22 @@ CREATE TABLE `store_type` (
   `name` varchar(255) DEFAULT NULL,
   `logo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of store_type
 -- ----------------------------
 INSERT INTO `store_type` VALUES ('1', 'iPhone', '1323275290_iphone_store_badge.png');
+INSERT INTO `store_type` VALUES ('2', 'iPhone Coming soon', '1323286101_iphone_store_badge_cs.png');
+INSERT INTO `store_type` VALUES ('3', 'iPad', '1323286121_ipad_store_badge.png');
+INSERT INTO `store_type` VALUES ('4', 'iPad Coming soon', '1323286144_ipad_store_badge_cs.png');
+INSERT INTO `store_type` VALUES ('5', 'Mac Store', '1323286285_mac_app_store_badge.png');
+INSERT INTO `store_type` VALUES ('6', 'Mac store Coming soon', '1323286300_mac_app_store_badge_cs.png');
+INSERT INTO `store_type` VALUES ('7', 'App Store', '1323286316_app_store_badge.jpg');
+INSERT INTO `store_type` VALUES ('8', 'Android phone', '1323286336_android_phone_badge.png');
+INSERT INTO `store_type` VALUES ('9', 'Android tab', '1323286348_android_tablet_badge.png');
+INSERT INTO `store_type` VALUES ('10', 'Android phone coming soon', '1323286405_android_phone_badge_cs.png');
+INSERT INTO `store_type` VALUES ('11', 'Android tab coming soon', '1323286432_android_tablet_badge_cs.png');
 
 -- ----------------------------
 -- Table structure for `video`

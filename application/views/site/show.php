@@ -12,26 +12,35 @@
         	    <div id="slideshow" class="span8">
         	        <div class="slides_container span8">
             	        <?php if (isset($videos) && $videos): ?>
-                	            <?php foreach ($videos as $item): ?>
-                                    <div>
-                                        <?php echo htmlspecialchars_decode($item->video) ?>
-                                    </div>                                                              	            
-                	            <?php endforeach ?>
+            	            <?php foreach ($videos as $item): ?>
+                                <div>
+                                    <?php echo htmlspecialchars_decode($item->video) ?>
+                                </div>                                                              	            
+            	            <?php endforeach ?>
 
             	        <?php endif ?>
             	        <?php if (isset($images) && $images): ?>
-                	            <?php foreach ($images as $item): ?>
-                                    <div>
-                                        <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
-                                            <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                                        </a>
-                                    </div>                                                              	            
-                	            <?php endforeach ?>
+            	            <?php foreach ($images as $item): ?>
+                                <div>
+                                    <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                                        <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                    </a>
+                                </div>                                                              	            
+            	            <?php endforeach ?>
 
             	        <?php endif ?>
             	    </div>
         	    </div>
-        	    
+        	    <?php if (isset($stores) && $stores): ?>
+        	        <h3>Available on</h3>
+                    <div class="span9 available-on">
+                        <?php foreach ($stores as $item): ?>
+                            <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
+                                <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                            </a>
+                        <?php endforeach ?>
+                    </div>
+        	    <?php endif ?>
         	    <div class="span8 game-info">
         	        <h3><?php echo $site->name ?></h3>
         	        <h4><?php echo $site->title ?></h4>
