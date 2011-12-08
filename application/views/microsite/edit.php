@@ -20,7 +20,7 @@
         <div class="clearfix  separator">
             <label><strong>Game</strong></label>
         </div>
-        
+        <div class="section-content">
             <div class="clearfix">
                 <label for="name">Name</label>
                 <div class="input">
@@ -46,10 +46,12 @@
                     <textarea rows="3" name="description" id="description" class="xxlarge"><?php echo $item ? $item->description : '' ?></textarea>
                 </div>
             </div> 
+        </div>
         
         <div class="clearfix separator">
             <label><strong>Social</strong></label>
         </div>
+        <div class="section-content">
             <div class="clearfix">
                 <label for="app_id">Facebook app id</label>
                 <div class="input">
@@ -62,10 +64,12 @@
                     <textarea rows="3" name="ga_code" id="ga_code" class="xxlarge"><?php echo $item ? $item->ga_code : '' ?></textarea>
                 </div>
             </div>        
-
+        </div>
+        
         <div class="clearfix separator">
             <label><strong>Sections</strong></label>
         </div>
+        <div class="section-content">
             <div class="clearfix">
                 <label for="about_background_color">About</label>
                 <div class="input">
@@ -87,10 +91,12 @@
                     <div id="reviews_colorpicker"></div>
                 </div>
             </div> 
+        </div>
         
         <div class="clearfix separator">
             <label><strong>Page</strong></label>
         </div>               
+        <div class="section-content">
             <div class="clearfix">
                 <label for="font_color">Font color</label>
                 <div class="input">
@@ -129,7 +135,7 @@
                     <?php endif ?>
                 </div>
             </div>
-        
+        </div>
         <div class="actions">
             <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn" href="<?php echo base_url() ?>microsite">Cancel</a>
         </div>        

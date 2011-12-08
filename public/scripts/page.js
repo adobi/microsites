@@ -16,11 +16,13 @@
 	    $('#fileupload').fileupload();
 	    
 	    $('body').delegate('.dialog-image', 'click', function() {
+	        /*
 	        var img = $('<img/>', {src: $(this).find('img').attr('src')});
-	        console.log('width:'+img.get(0).width+'px');
+	        //console.log('width:'+img.get(0).width+'px');
 	        $('<div/>').append(img).dialog();
 	        
 	        $('.ui-dialog').css('width', img.get(0).width + 30);
+	        */
 	    }); 
 	    
 	    
@@ -86,6 +88,22 @@
 	            readOnly:true
             });
 	    });
+	    
+	    $('.separator, .separator label').css('cursor', 'pointer');
+	    $('.section-content').hide();
+	    $('.section-content:first').show();
+	    $('body').delegate('.separator', 'click', function() {
+	        //$('.section-content').hide();
+	        $(this).next('.section-content:first').toggle();
+	    });
+	    
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            changeYear: true,
+            changeMonth: true,
+            showMonthAfterYear:true,
+            yearRange: '1980:+5'
+        });	    
     
 	})
 	
