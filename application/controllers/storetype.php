@@ -62,17 +62,32 @@ class Storetype extends MY_Controller
         $id = $this->uri->segment(3);
         
         if ($id) {
-            $this->load->model('', 'model');
             
-            $this->model->delete($id);
+            $this->_deleteImage($id, true);
+            
+            $this->load->model('Stores', 'store');
+            
+            $this->store->delete(array('type_id'=>$id));
         }
         
         redirect($_SERVER['HTTP_REFERER']);
     }
     
+    public function delete_image() 
+    {
+        $id = $this->uri->segment(3);
+        
+        if ($id) {
+            
+            $this->_deleteImage($id);
+        }
+        
+        redirect($_SERVER['HTTP_REFERER']);
+    }    
+    
     private function _deleteImage($id, $withRecord = false) 
     {
-        $this->load->model('Storetype', 'model');
+        $this->load->model('Storetypes', 'model');
         
         $item = $this->model->find($id);
         

@@ -38,7 +38,7 @@
                         </a>
                     </div>
                     <p>
-                        <a href="<?php echo base_url() ?>review/delete_image/<?php echo $item->id ?>">delete</a>
+                        <a href="<?php echo base_url() ?>storetype/delete_image/<?php echo $item->id ?>">delete</a>
                     </p>
                 <?php else: ?>
                     <input type="file" name = "logo" value = "" />

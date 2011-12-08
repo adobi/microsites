@@ -70,7 +70,35 @@
                 <?php endif ?>
             </div>
             
-        </div>                    
+        </div>    
+        <div class="clearfix">
+            <label for="url"><strong>Analytics</strong></label>
+        </div>  
+        <div class="clearfix">
+            <label for="ga_category">Category</label>
+            <div class="input">
+                <input type="text" name = "ga_category" id = "ga_category" class = "xxlarge" value = "<?php echo $item ? $item->ga_category : '' ?>"/>
+            </div>
+        </div>                  
+        <div class="clearfix">
+            <label for="ga_action">Action</label>
+            <div class="input">
+                <input type="text" name = "ga_action" id = "ga_action" class = "xxlarge" value = "<?php echo $item ? $item->ga_action : '' ?>"/>
+            </div>
+        </div>                  
+        <div class="clearfix">
+            <label for="ga_label">Label</label>
+            <div class="input">
+                <input type="text" name = "ga_label" id = "ga_label" class = "xxlarge" value = "<?php echo $item ? $item->ga_label : '' ?>"/>
+            </div>
+        </div>                  
+        <div class="clearfix">
+            <label for="ga_value">Value</label>
+            <div class="input">
+                <input type="text" name = "ga_value" id = "ga_value" class = "xxlarge" value = "<?php echo $item ? $item->ga_value : '' ?>"/>
+            </div>
+        </div>                  
+                        
         <div class="actions">
             <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn" href="<?php echo base_url() ?>microsite">Cancel</a>
         </div>      

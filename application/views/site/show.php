@@ -31,26 +31,28 @@
             	        <?php endif ?>
             	    </div>
         	    </div>
-        	    <?php if (isset($stores) && $stores): ?>
-        	        <h3>Available on</h3>
-                    <div class="span9 available-on">
-                        <?php foreach ($stores as $item): ?>
-                            <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
-                                <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
-                            </a>
-                        <?php endforeach ?>
-                    </div>
-        	    <?php endif ?>
         	    <div class="span8 game-info">
-        	        <h3><?php echo $site->name ?></h3>
-        	        <h4><?php echo $site->title ?></h4>
+        	        <h1><?php echo $site->name ?></h1>
+        	        <h2><?php echo $site->title ?></h2>
         	        <p><?php echo $site->description ?></p>
         	    </div>
+        	    <?php if (isset($stores) && $stores): ?>
+                    <div class="span9 available-on">
+            	        <h2>Available on</h2>
+            	        <div class="span9" style="margin-top:10px;">
+                            <?php foreach ($stores as $item): ?>
+                                <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
+                                    <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                                </a>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+        	    <?php endif ?>
         	    
             	<?php if (isset($reviews) && $reviews): ?>
             	    
                 	<div class="span8 reviews">
-                	    <h4>Reviews</h4>
+                	    <h2>Reviews</h2>
                 	    <?php foreach ($reviews as $item): ?>
                             <div class="span8 item review-item">
                                 <h5 class = "title">
@@ -64,7 +66,7 @@
                                 </h5>
                                 <h6><?php echo $item->press ?></h6>
 
-                                <div class="span8 description"><?php echo htmlspecialchars_decode($item->description) ?></div>
+                                <div class="span8 review-description"><?php echo htmlspecialchars_decode($item->description) ?></div>
                             </div>            	        
                 	    <?php endforeach ?>
                 	</div>    

@@ -270,33 +270,16 @@ class Microsite extends MY_Controller
         $id = $this->uri->segment(3);
         $data = array();
         
-        $this->load->model('Storetypes', 'model');
+        
         $this->load->model('Microsites', 'site');
         $this->load->model('Stores', 'store');
         
         $data['site'] = $this->site->find($id);
         
-        $data['avaliable_stores'] = $this->model->fetchAvailableForSite($id);
-        
         $data['stores'] = $this->store->fetchForSite($id);
         
-        $this->form_validation->set_rules('url', 'Url', 'trim|required');
-        $this->form_validation->set_rules('type_id', 'Store', 'trim|required');
         
-        if ($this->form_validation->run() && $data['site']) {
-            
-            if (isset($_POST['store_id'])) {
                 
-                $this->store->update($_POST, $_POST['store_id']);
-            } else {
-                $_POST['site_id'] = $id;
-                
-                $this->store->insert($_POST);
-            }
-            
-            redirect($_SERVER['HTTP_REFERER']);
-        }
-        
         $this->template->build('microsite/stores', $data);
     }
     

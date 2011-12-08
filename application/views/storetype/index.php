@@ -14,7 +14,7 @@
                 </p>
                 <p class="item-nav">
                     <a href="<?php echo base_url() ?>storetype/edit/<?php echo $item->id ?>">edit</a>
-                    <a href="#">delete</a>
+                    <a href="<?php echo base_url() ?>storetype/delete/<?php echo $item->id ?>">delete</a>
                 </p>
             </div>
         <?php endforeach ?>

@@ -51,7 +51,7 @@ class Review extends MY_Controller
             //dump($_FILES); die;
             if ($this->upload->do_upload('press_logo')) {
                 
-                if ($id) {
+                if ($id && is_numeric($id)) {
                     
                     $this->_deleteImage($id);
                 }

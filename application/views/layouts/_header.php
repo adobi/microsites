@@ -20,14 +20,14 @@
         
     <div id="fb-root"></div>	
     
-    <div class="container <?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review', 'storetype')) ? 'span16' : 'span8' ?>" id="top">
+    <div class="container <?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review', 'storetype', 'store')) ? 'span16' : 'span8' ?>" id="top">
     	<div class="content">
         <?php //if ($this->session->userdata('logged_in') && $this->uri->segment(1) === 'manage'): ?>
             
             <h3>Microsite management</h3>
             <div class="span16" id="main-nav">
                 <ul class="tabs">
-                    <li class="<?php echo in_array($this->uri->segment(1), array('microsite', 'review')) ? 'active' : '' ?>">
+                    <li class="<?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review')) ? 'active' : '' ?>">
                         <a href="<?php echo base_url() ?>microsite">Sites</a>
                     </li>
 					<li <?php echo $this->uri->segment(1) === 'storetype' ? 'class = "active"' : '' ?>>

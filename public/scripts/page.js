@@ -34,6 +34,9 @@
 
 	    if ($('#reviews_colorpicker').length) $('#reviews_colorpicker').farbtastic('#reviews_background_color');
 	        
+	    if ($('#stores_colorpicker').length) $('#stores_colorpicker').farbtastic('#stores_background_color');
+	    
+	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');
