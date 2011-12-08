@@ -49,9 +49,11 @@ class Store extends MY_Controller
         
         
         $this->form_validation->set_rules('url', 'Url', 'trim|required');
+        
         if (!$data['site'])
             $this->form_validation->set_rules('type_id', 'Store', 'trim|required');
         
+        //dump($id); die;
         if ($this->form_validation->run()) {
         
             if (is_numeric($id)) {
@@ -60,7 +62,7 @@ class Store extends MY_Controller
                 
             } else {
                 
-                $_POST['site_id'] = $id;
+                $_POST['site_id'] = $site;
                 
                 $this->model->insert($_POST);
             }

@@ -39,11 +39,19 @@
         	    <?php if (isset($stores) && $stores): ?>
                     <div class="span9 available-on">
             	        <h2>Available on</h2>
-            	        <div class="span9" style="margin-top:10px;">
+            	        <div class="span7" style="margin:0 auto;margin-top:10px;">
                             <?php foreach ($stores as $item): ?>
-                                <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
-                                    <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
-                                </a>
+                                <div class="span2" style="width:120px; display:inline-block;">
+                                    <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
+                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                                    </a>
+                                    <div class="popover below" style="margin-left:10px;display:inline-block;position:relative;padding:3px 0;z-index:inherit">
+                                        <div class="arrow" style="padding:0px;"></div>
+                                        <div class="inner" style="width:85px;">
+                                            <div class="title" style="border-radius:3px;text-align:center;padding:5px 8px;color:#666"><strong>phone</strong></div>
+                                        </div>
+                                    </div>
+                                </div>
                             <?php endforeach ?>
                         </div>
                     </div>
