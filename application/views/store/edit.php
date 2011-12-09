@@ -21,7 +21,7 @@
         </div>   
         <div class="section-content">
             <div class="clearfix">
-                <label for="name">Select a store</label>
+                <label for="name">Available stores</label>
                 <div class="input">
                 <?php if ($avaliable_stores): ?>
                     <div class="row" style="margin-left:0px;">
@@ -56,7 +56,13 @@
                 <div class="input">
                     <input type="text" name = "url" id = "url" class = "xxlarge" value = "<?php echo $item ? $item->url : 'http://' ?>"/>
                 </div>
-            </div>  
+            </div> 
+            <div class="clearfix">
+                <label for="label">Display label</label>
+                <div class="input">
+                    <input type="text" name = "label" id = "label" class = "xxlarge" value = "<?php echo $item ? $item->label : '' ?>"/>
+                </div>
+            </div>              
         </div>       
         <div class="clearfix separator">
             <label><strong>Analytics</strong></label>

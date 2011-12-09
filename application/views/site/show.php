@@ -45,12 +45,22 @@
                                     <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
                                         <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
                                     </a>
-                                    <div class="popover below" style="margin-left:10px;display:inline-block;position:relative;padding:3px 0;z-index:inherit">
-                                        <div class="arrow" style="padding:0px;"></div>
-                                        <div class="inner" style="width:85px;">
-                                            <div class="title" style="border-radius:3px;text-align:center;padding:5px 8px;color:#666"><strong>phone</strong></div>
+                                    <?php if ($item->label): ?>
+                                        
+                                        <div class="popover below" style="">
+                                            <div class="arrow" style=""></div>
+                                            <div class="inner" style="">
+                                                <div class="title"><strong><?php echo $item->label ?></strong></div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    <?php else: ?>
+                                        <div class="popover below inactive" style="">
+                                            <div class="arrow" ></div>
+                                            <div class="inner" >
+                                                <div class="title"><strong>&nbsp;</strong></div>
+                                            </div>
+                                        </div>
+                                    <?php endif ?>
                                 </div>
                             <?php endforeach ?>
                         </div>

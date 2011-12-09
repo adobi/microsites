@@ -20,6 +20,7 @@
             <div class="row" style="margin-left:0px;">
             <?php foreach ($stores as $item): ?>
                 <div class="span2 item" style="width:160px!important;">
+                    <p style="text-align:center"><strong><?php echo $item->label ? $item->label : '&nbsp;' ?></strong></p>
                     <p style="text-align:center">
                         <a href="<?php echo $item->url ?>" target = "_blank">
                             <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">

@@ -36,7 +36,8 @@ class Store extends MY_Controller
         
         
         $this->load->model('Storetypes', 'type');
-        $data['avaliable_stores'] = $this->type->fetchAvailableForSite($data['site']->id);
+        //$data['avaliable_stores'] = $this->type->fetchAvailableForSite($data['site']->id);
+        $data['avaliable_stores'] = $this->type->fetchAll();
         
         $this->load->model('Stores', 'model');
         

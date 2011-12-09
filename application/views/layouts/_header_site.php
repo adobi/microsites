@@ -21,7 +21,7 @@
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
         <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
         <script src="<?php echo base_url(); ?>scripts/plugins/raty/js/jquery.raty.min.js"></script>    	    
-        <script src="https://raw.github.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>    	    
+  	    
         <script type="text/javascript">
             BASE_URL = "<?php echo base_url() ?>";
         </script>
