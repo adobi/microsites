@@ -61,7 +61,8 @@
             <div class="clearfix">
                 <label for="ga_code">Tracking code</label>
                 <div class="input">
-                    <textarea rows="3" name="ga_code" id="ga_code" class="xxlarge"><?php echo $item ? $item->ga_code : '' ?></textarea>
+                    <textarea rows="12" name="ga_code" id="ga_code" class="xxlarge"><?php echo $item ? $item->ga_code : '' ?></textarea>
+                    <span class="help-block">without <em>script</em> tags</span>
                 </div>
             </div>        
         </div>

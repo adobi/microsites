@@ -42,7 +42,14 @@
             	        <div class="span7" style="margin:0 auto;margin-top:10px;">
                             <?php foreach ($stores as $item): ?>
                                 <div class="span2" style="width:120px; display:inline-block;">
-                                    <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon">
+                                    <a href="<?php echo $item->url ?>" target = "_blank"  class="store-icon" 
+                                        data-ga = "1" 
+                                        data-ga-category = "<?php echo $item->ga_category ?>"
+                                        data-ga-action = "<?php echo $item->ga_action ?>" 
+                                        data-ga-label = "<?php echo $item->ga_label ?>" 
+                                        data-ga-value = "<?php echo $item->ga_value ?>" 
+                                        data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
+                                    >
                                         <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
                                     </a>
                                     <?php if ($item->label): ?>
@@ -75,7 +82,14 @@
                             <div class="span8 item review-item">
                                 <h5 class = "title">
                                     <div class="star" data-rate="<?php echo $item->rate ?>"></div>
-                                    <a href="<?php echo $item->url ?>" target = "_blank"><?php echo $item->title ?></a>
+                                    <a href="<?php echo $item->url ?>" target = "_blank" 
+                                        data-ga = "1" 
+                                        data-ga-category = "<?php echo $item->ga_category ?>"
+                                        data-ga-action = "<?php echo $item->ga_action ?>" 
+                                        data-ga-label = "<?php echo $item->ga_label ?>" 
+                                        data-ga-value = "<?php echo $item->ga_value ?>" 
+                                        data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"                                        
+                                    ><?php echo $item->title ?></a>
                                     <span class="pull-right">
                                         <?php if ($item->press_logo): ?>
                                             <img src="<?php echo base_url() ?>uploads/<?php echo $item->press_logo ?>" alt="<?php echo $item->press ?>" title="<?php echo $item->press ?>">

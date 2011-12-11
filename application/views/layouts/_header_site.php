@@ -103,13 +103,38 @@
             	    });                            
                     
             	    //$('.game-info h1, .available-on h2, .reviews h2').lettering();
+            	    
+            	    $('[data-ga=1]').bind('click', function() {
+            	        var self = $(this),
+            	            category = self.attr('data-ga-category'),
+            	            action = self.attr('data-ga-action'),
+            	            label = self.attr('data-ga-label'),
+            	            value = self.attr('data-ga-value'),
+            	            nonInteraction = self.attr('data-ga-noninteraction');
+                        
+            	        if (category && action && label && value) {
+            	            
+                	        if (nonInteraction == '1') {
+                	            
+                    	        _gaq.push(['_trackEvent', category, action, label, value]);
+                	        } else {
+                	            
+                    	        _gaq.push(['_trackEvent', category, action, label, value, true]);
+                	        }
+                	        
+                	        console.log('ga track event: ', self);
+            	        }
+            	        
+            	        return true;
+            	    })
                 });
             }) (jQuery)
         </script>
         
     <?php endif ?>
     
-    <body>    
+    <body>  
+
         <div id="fb-root"></div>
         <script>
           window.fbAsyncInit = function() {
@@ -132,3 +157,8 @@
              d.getElementsByTagName('head')[0].appendChild(js);
            }(document));
         </script>        
+        <?php if ($site->ga_code): ?>
+            <script type="text/javascript">
+                <?php echo $site->ga_code ?>
+            </script>
+         <?php endif ?> 

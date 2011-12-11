@@ -57,7 +57,11 @@ class Review extends MY_Controller
                 }
                 
                 $_POST['press_logo'] = $this->upload->file_name;
-            }            
+            }  
+            
+            if (!isset($_POST['ga_noninteraction'])) {
+                $_POST['ga_noninteraction'] = null;
+            }
             
             if ($id && is_numeric($id)) {
                 $this->model->update($_POST, $id);

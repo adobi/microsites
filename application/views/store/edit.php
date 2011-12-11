@@ -89,9 +89,15 @@
             <div class="clearfix">
                 <label for="ga_value">Value</label>
                 <div class="input">
-                    <input type="text" name = "ga_value" id = "ga_value" class = "xxlarge" value = "<?php echo $item ? $item->ga_value : '' ?>"/>
+                    <input type="text" name = "ga_value" id = "ga_value" class = "xxlarge" value = "<?php echo $item ? $item->ga_value : '1' ?>"/>
                 </div>
-            </div>                  
+            </div>  
+            <div class="clearfix">
+                <label for="ga_noninteraction">Non interatction</label>
+                <div class="input" style="text-align:left">
+                    <input type="checkbox" name = "ga_noninteraction" id = "ga_noninteraction" value = "1" <?php echo $item && $item->ga_noninteraction ? 'checked = "checked"' : '' ?>/>
+                </div>
+            </div>                             
         </div>
         <div class="actions">
             <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn" href="<?php echo base_url() ?>microsite">Cancel</a>

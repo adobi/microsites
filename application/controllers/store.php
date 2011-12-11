@@ -56,6 +56,10 @@ class Store extends MY_Controller
         
         //dump($id); die;
         if ($this->form_validation->run()) {
+
+            if (!isset($_POST['ga_noninteraction'])) {
+                $_POST['ga_noninteraction'] = null;
+            }
         
             if (is_numeric($id)) {
                 
