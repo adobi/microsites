@@ -22,9 +22,13 @@
             	        <?php if (isset($images) && $images): ?>
             	            <?php foreach ($images as $item): ?>
                                 <div>
+                                    <!-- 
                                     <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
+                                     -->
                                         <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                    <!-- 
                                     </a>
+                                     -->
                                 </div>                                                              	            
             	            <?php endforeach ?>
 
