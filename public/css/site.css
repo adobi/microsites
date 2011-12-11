@@ -124,10 +124,11 @@
 }
 
 
-.game-info h2,  .available-on h2, .reviews h2 {
+/*.game-info h2,  .available-on h2, .reviews h2 {*/
+.section-title {
     border-bottom:1px solid #dedede;padding:5px 15px; 
-    color:#02607C;
-    color:#634F4C;
+    //color:#02607C;
+    //color:#634F4C;
 }
 /*
 .game-info h1 {

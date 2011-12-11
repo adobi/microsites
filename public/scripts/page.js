@@ -38,6 +38,7 @@
 	        
 	    if ($('#stores_colorpicker').length) $('#stores_colorpicker').farbtastic('#stores_background_color');
 	    
+	    if ($('#section_title_colorpicker').length) $('#section_title_colorpicker').farbtastic('#section_title_color');
 	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        

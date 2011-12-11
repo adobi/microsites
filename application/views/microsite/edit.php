@@ -71,6 +71,13 @@
         </div>
         <div class="section-content">
             <div class="clearfix">
+                <label for="about_background_color">Title Color</label>
+                <div class="input">
+                    <input type="text" name = "section_title_color" id = "section_title_color" class = "small" value = "<?php echo $item ? ($item->section_title_color ? $item->section_title_color : '#')  : '#' ?>"/>
+                    <div id="section_title_colorpicker"></div>
+                </div>
+            </div>             
+            <div class="clearfix">
                 <label for="about_background_color">About</label>
                 <div class="input">
                     <input type="text" name = "about_background_color" id = "about_background_color" class = "small" value = "<?php echo $item ? ($item->about_background_color ? $item->about_background_color : '#')  : '#' ?>"/>

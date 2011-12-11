@@ -18,7 +18,7 @@
                     <a href="<?php echo $item->url ?>" target = "_blank"><?php echo $item->title ?></a>
                     
                     <span class="pull-right">
-                        <?php echo $item->press ?>
+                        <?php echo $item->press ?> <?php echo to_date($item->reviewd_at) ?>
                         <?php if ($item->press_logo): ?>
                             <img src="<?php echo base_url() ?>uploads/<?php echo $item->press_logo ?>" alt="">
                         <?php endif ?>

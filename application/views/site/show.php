@@ -33,12 +33,12 @@
         	    </div>
         	    <div class="span8 game-info">
         	        <h1><?php echo $site->name ?></h1>
-        	        <h2><?php echo $site->title ?></h2>
+        	        <h2 class="section-title"><?php echo $site->title ?></h2>
         	        <p><?php echo $site->description ?></p>
         	    </div>
         	    <?php if (isset($stores) && $stores): ?>
                     <div class="span9 available-on">
-            	        <h2>Available on</h2>
+            	        <h2 class="section-title">Available on</h2>
             	        <div class="span7" style="margin:0 auto;margin-top:10px;">
                             <?php foreach ($stores as $item): ?>
                                 <div class="span2" style="width:120px; display:inline-block;">
@@ -70,7 +70,7 @@
             	<?php if (isset($reviews) && $reviews): ?>
             	    
                 	<div class="span8 reviews">
-                	    <h2>Reviews</h2>
+                	    <h2 class="section-title">Reviews</h2>
                 	    <?php foreach ($reviews as $item): ?>
                             <div class="span8 item review-item">
                                 <h5 class = "title">
@@ -82,7 +82,7 @@
                                         <?php endif ?>           
                                     </span>                         
                                 </h5>
-                                <h6><?php echo $item->press ?></h6>
+                                <h6><?php echo $item->press ?> (<?php echo to_date($item->reviewd_at) ?>)</h6>
 
                                 <div class="span8 review-description"><?php echo htmlspecialchars_decode($item->description) ?></div>
                             </div>            	        

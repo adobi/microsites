@@ -67,7 +67,13 @@
                 .available-on {
                     background: <?php echo $site->stores_background_color ?>
                 }
-            <?php endif ?>            
+            <?php endif ?> 
+            
+            <?php if ($site->section_title_color): ?>
+                .section-title {
+                    color: <?php echo $site->section_title_color ?>
+                }
+            <?php endif ?>                        
         </style>
         <script type="text/javascript">
             (function($) {
