@@ -52,23 +52,21 @@
 	        
 	        return false;
 	    });
-	    /*
-	    $('body').delegate('.edit-review', 'click', function() {
-	        
-	        var self = $(this), form = $('#edit-review-form'), item = self.parents('.item:first');
-	        //console.log(form, item);
-	        form.find('[name=title]').val(item.find('.title').find('a').html());
-	        form.find('[name=description]').val(item.find('.description').html());
-	        form.find('[name=url]').val(item.find('.title').find('a').attr('href'));
-	        form.append($('<input />', {type: 'hidden', name: 'id', value: self.attr('data-id')}));
-	        
-    	    $('#rate-star').raty('start', item.find('.star').attr('data-rate'))
-	        
-	        $.scrollTo($('.container'));
-	        
-	        return false;
-	    });	
-	    */
+
+        $('#loading-global')
+           .ajaxStart(function() {
+                
+        		$(this).show();
+           })
+           .ajaxStop(function() {
+        		var self = $(this);
+                self.html('Done!');
+                
+                setTimeout(function() {
+                    self.html('Working...');
+                    self.hide();
+                }, 1500)
+            });
 	    
 	    $('#rate-star').each(function(i, v) {
 	        var self = $(v);

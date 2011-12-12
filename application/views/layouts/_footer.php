@@ -20,6 +20,9 @@
 		    var App = App || {};
 			App.URL = "<?php echo base_url() ?>";
 
-		</script>       		
+		</script>     
+
+        <div id="loading-global">Working...</div>		
+		  		
     </body>
 </html>

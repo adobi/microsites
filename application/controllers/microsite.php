@@ -17,7 +17,7 @@ class Microsite extends MY_Controller
         
         $this->load->model('Microsites', 'sites');
         
-        $data['items'] = $this->sites->fetchAll();
+        $data['items'] = $this->sites->fetchAll(array('order'=>array('by'=>'name', 'dest'=>'asc')));
         
         $this->template->build('microsite/index', $data);
     }

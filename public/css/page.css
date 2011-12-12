@@ -72,3 +72,18 @@
 .sortable-item img, .sortable-wrapper .title {
     cursor:move;
 }
+
+#loading-global {
+    background: #FFF1A8;//#D8DFEA;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px 30px 10px 30px;
+    position: fixed;
+    top: 0;
+    left:45%;
+    z-index: 9999;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
