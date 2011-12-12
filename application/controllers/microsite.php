@@ -258,6 +258,7 @@ class Microsite extends MY_Controller
             
             @unlink($this->config->item('upload_path_base') . $file);
             @unlink($this->config->item('upload_path_base') . 'thumbs/' . $file);
+            //@unlink($this->config->item('upload_path') . $file);
             
         }
         redirect($_SERVER['HTTP_REFERER']);

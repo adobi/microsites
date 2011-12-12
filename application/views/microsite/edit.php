@@ -126,7 +126,7 @@
                     <?php if ($item && $item->background_image): ?>
                         <div class="media-grid">
                             <a href="#" class="media-a">
-                                <img src="<?php echo base_url() ?>uploads/<?php echo $item->background_image ?>" alt="" class="thumbnail"/>
+                                <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->background_image ?>" alt="" class="thumbnail"/>
                             </a>
                         </div>
                         <p>
