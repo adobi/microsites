@@ -160,7 +160,24 @@
                 $.post(App.URL+"video/update_order", data, function() {});
             }
         });
-		$( "#video-sortable" ).disableSelection();       
+		$( "#video-sortable" ).disableSelection();  
+		
+        $( "#review-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#review-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"review/update_order", data, function() {});
+            }
+        });
+		$( "#review-sortable" ).disableSelection(); 		     
 	})
 	
 }) (jQuery);

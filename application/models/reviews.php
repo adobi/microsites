@@ -15,6 +15,6 @@ class Reviews extends MY_Model
             return false;
         }
         
-        return $this->fetchRows(array('where'=>array('site_id'=>$id)));
+        return $this->fetchRows(array('where'=>array('site_id'=>$id), 'order'=>array('by'=>'order', 'dest'=>'asc')));
     }
 }

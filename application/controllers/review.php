@@ -125,5 +125,20 @@ class Review extends MY_Controller
         }
         
         return $withRecord ? $this->model->delete($id) : true;
-    }    
+    }   
+    
+    
+    public function update_order()
+    {
+        if ($_POST && isset($_POST['order'])) {
+            
+            $this->load->model('Reviews', 'model');
+            
+            foreach ($_POST['order'] as $order => $id) {
+                $this->model->update(array('order'=>$order), $id);
+            }
+        }
+        
+        die;
+    }     
 }

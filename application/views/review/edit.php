@@ -46,7 +46,7 @@
             <div class="clearfix">
                 <label for="reviewd_at">Reviewd at</label>
                 <div class="input">
-                    <input type="text" name = "reviewd_at" id = "reviewd_at" class = "small datepicker" value = "<?php echo $item ? $item->reviewd_at : date('Y-m-d') ?>"/>
+                    <input type="text" name = "reviewd_at" id = "reviewd_at" class = "small datepicker" value = "<?php echo $item ? to_date($item->reviewd_at) : date('Y-m-d') ?>"/>
                 </div>
             </div>         
             <div class="clearfix">
