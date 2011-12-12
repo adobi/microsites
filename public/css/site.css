@@ -55,7 +55,7 @@
 }      
 
 .pagination-wrapper {
-    margin-top:20px;
+    margin-top:10px;
     text-align:right;
 }
 
@@ -77,11 +77,13 @@
 
 .slide-pagination li a {
 	display:block;
-	width:12px;
-	height:0;
+	width:10px;
+	height:0px;
 	padding:0px;
-	padding-top:12px;
-	background-image:url('../images/pagination.png');
+	padding-top:10px;
+	//background-image:url('../images/pagination.png');
+	border-radius: 6px;
+	background:#333;
 	background-position:0 0;
 	float:left;
 	overflow:hidden;
@@ -90,11 +92,12 @@
 }
 
 .slide-pagination li a:hover {
-    background-color:transparent;
+    background-color:#0099cc;
 }
 
 .slide-pagination li.current a {
-	background-position:0 -12px;
+	//background-position:0 -12px;
+	background:#0099cc;
 }    
 
 .star {

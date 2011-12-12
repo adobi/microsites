@@ -71,69 +71,113 @@
             <label><strong>Sections</strong></label>
         </div>
         <div class="section-content">
-            <div class="clearfix">
-                <label for="about_background_color">Title Color</label>
-                <div class="input">
-                    <input type="text" name = "section_title_color" id = "section_title_color" class = "small" value = "<?php echo $item ? ($item->section_title_color ? $item->section_title_color : '#')  : '#' ?>"/>
-                    <div id="section_title_colorpicker"></div>
+            
+            <div class="clearfix separator">
+                <label><strong>Headers</strong></label>
+            </div>
+            <div class="section-content">
+                <div class="clearfix">
+                    <label for="about_background_color">Title Color</label>
+                    <div class="input">
+                        <input type="text" name = "section_title_color" id = "section_title_color" class = "small" value = "<?php echo $item ? ($item->section_title_color ? $item->section_title_color : '#')  : '#' ?>"/>
+                        <div id="section_title_colorpicker"></div>
+                    </div>
+                </div>            
+            </div>
+            
+            <div class="clearfix separator">
+                <label><strong>Game</strong></label>
+            </div>
+            <div class="section-content">
+                <div class="clearfix">
+                    <label for="about_background_color">Description background color</label>
+                    <div class="input">
+                        <input type="text" name = "about_background_color" id = "about_background_color" class = "small" value = "<?php echo $item ? ($item->about_background_color ? $item->about_background_color : '#')  : '#' ?>"/>
+                        <div id="about_colorpicker"></div>
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="clearfix separator">
+                <label><strong>Slides pagination</strong></label>
+            </div>
+            <div class="section-content">
+                <div class="clearfix">
+                    <label for="about_background_color">Link color</label>
+                    <div class="input">
+                        <input type="text" name = "page_link_color" id = "page_link_color" class = "small" value = "<?php echo $item ? ($item->page_link_color ? $item->page_link_color : '#')  : '#' ?>"/>
+                        <div id="page_link_colorpicker"></div>
+                    </div>
+                </div> 
+                <div class="clearfix">
+                    <label for="about_background_color">Active link color</label>
+                    <div class="input">
+                        <input type="text" name = "page_active_color" id = "page_active_color" class = "small" value = "<?php echo $item ? ($item->page_active_color ? $item->page_active_color : '#')  : '#' ?>"/>
+                        <div id="page_active_colorpicker"></div>
+                    </div>
+                </div> 
+            </div>
+                        
+            <div class="clearfix separator">
+                <label><strong>Available in</strong></label>
+            </div>     
+            <div class="section-content">                   
+                <div class="clearfix">
+                    <label for="stores_background_color">Stores  background color</label>
+                    <div class="input">
+                        <input type="text" name = "stores_background_color" id = "stores_background_color" class = "small" value = "<?php echo $item ? ($item->stores_background_color ? $item->stores_background_color : '#')  : '#' ?>"/>
+                        <div id="stores_colorpicker"></div>
+                    </div>
+                </div> 
+                <div class="clearfix">
+                    <label for="bubble_border_color">Bubble border color</label>
+                    <div class="input">
+                        <input type="text" name = "bubble_border_color" id = "bubble_border_color" class = "small" value = "<?php echo $item ? ($item->bubble_border_color ? $item->bubble_border_color : '#')  : '#' ?>"/>
+                        <div id="bubble_border_colorpicker"></div>
+                    </div>
+                </div> 
+                <div class="clearfix">
+                    <label for="bubble_color">Bubble text color</label>
+                    <div class="input">
+                        <input type="text" name = "bubble_color" id = "bubble_color" class = "small" value = "<?php echo $item ? ($item->bubble_color ? $item->bubble_color : '#')  : '#' ?>"/>
+                        <div id="bubble_colorpicker"></div>
+                    </div>
+                </div>                         
+                <div class="clearfix">
+                    <label for="bubble_background_color">Bubbel background color</label>
+                    <div class="input">
+                        <input type="text" name = "bubble_background_color" id = "bubble_background_color" class = "small" value = "<?php echo $item ? ($item->bubble_background_color ? $item->bubble_background_color : '#')  : '#' ?>"/>
+                        <div id="bubble_background_colorpicker"></div>
+                    </div>
+                </div> 
+            </div>   
+            
+            <div class="clearfix separator">
+                <label><strong>Review</strong></label>
+            </div>    
+            <div class="section-content">                                                      
+                <div class="clearfix">
+                    <label for="reviews_background_color">Review item background color</label>
+                    <div class="input">
+                        <input type="text" name = "reviews_background_color" id = "reviews_background_color" class = "small" value = "<?php echo $item ? ($item->reviews_background_color ? $item->reviews_background_color : '#')  : '#' ?>"/>
+                        <div id="reviews_colorpicker"></div>
+                    </div>
+                </div> 
+                <div class="clearfix">
+                    <label for="reviews_link_color">Review item title color</label>
+                    <div class="input">
+                        <input type="text" name = "reviews_link_color" id = "reviews_link_color" class = "small" value = "<?php echo $item ? ($item->reviews_link_color ? $item->reviews_link_color : '#')  : '#' ?>"/>
+                        <div id="reviews_link_colorpicker"></div>
+                    </div>
+                </div> 
+                <div class="clearfix">
+                    <label for="reviews_press_color">Review item press color</label>
+                    <div class="input">
+                        <input type="text" name = "reviews_press_color" id = "reviews_press_color" class = "small" value = "<?php echo $item ? ($item->reviews_press_color ? $item->reviews_press_color : '#')  : '#' ?>"/>
+                        <div id="reviews_press_colorpicker"></div>
+                    </div>
                 </div>
-            </div>             
-            <div class="clearfix">
-                <label for="about_background_color">About background color</label>
-                <div class="input">
-                    <input type="text" name = "about_background_color" id = "about_background_color" class = "small" value = "<?php echo $item ? ($item->about_background_color ? $item->about_background_color : '#')  : '#' ?>"/>
-                    <div id="about_colorpicker"></div>
-                </div>
-            </div> 
-            <div class="clearfix">
-                <label for="stores_background_color">Stores  background color</label>
-                <div class="input">
-                    <input type="text" name = "stores_background_color" id = "stores_background_color" class = "small" value = "<?php echo $item ? ($item->stores_background_color ? $item->stores_background_color : '#')  : '#' ?>"/>
-                    <div id="stores_colorpicker"></div>
-                </div>
-            </div> 
-            <div class="clearfix">
-                <label for="bubble_border_color">Bubble border color</label>
-                <div class="input">
-                    <input type="text" name = "bubble_border_color" id = "bubble_border_color" class = "small" value = "<?php echo $item ? ($item->bubble_border_color ? $item->bubble_border_color : '#')  : '#' ?>"/>
-                    <div id="bubble_border_colorpicker"></div>
-                </div>
-            </div> 
-            <div class="clearfix">
-                <label for="bubble_color">Bubble text color</label>
-                <div class="input">
-                    <input type="text" name = "bubble_color" id = "bubble_color" class = "small" value = "<?php echo $item ? ($item->bubble_color ? $item->bubble_color : '#')  : '#' ?>"/>
-                    <div id="bubble_colorpicker"></div>
-                </div>
-            </div>                         
-            <div class="clearfix">
-                <label for="bubble_background_color">Bubbel background color</label>
-                <div class="input">
-                    <input type="text" name = "bubble_background_color" id = "bubble_background_color" class = "small" value = "<?php echo $item ? ($item->bubble_background_color ? $item->bubble_background_color : '#')  : '#' ?>"/>
-                    <div id="bubble_background_colorpicker"></div>
-                </div>
-            </div>                        
-            <div class="clearfix">
-                <label for="reviews_background_color">Review item background color</label>
-                <div class="input">
-                    <input type="text" name = "reviews_background_color" id = "reviews_background_color" class = "small" value = "<?php echo $item ? ($item->reviews_background_color ? $item->reviews_background_color : '#')  : '#' ?>"/>
-                    <div id="reviews_colorpicker"></div>
-                </div>
-            </div> 
-            <div class="clearfix">
-                <label for="reviews_link_color">Review item title color</label>
-                <div class="input">
-                    <input type="text" name = "reviews_link_color" id = "reviews_link_color" class = "small" value = "<?php echo $item ? ($item->reviews_link_color ? $item->reviews_link_color : '#')  : '#' ?>"/>
-                    <div id="reviews_link_colorpicker"></div>
-                </div>
-            </div> 
-            <div class="clearfix">
-                <label for="reviews_press_color">Review item press color</label>
-                <div class="input">
-                    <input type="text" name = "reviews_press_color" id = "reviews_press_color" class = "small" value = "<?php echo $item ? ($item->reviews_press_color ? $item->reviews_press_color : '#')  : '#' ?>"/>
-                    <div id="reviews_press_colorpicker"></div>
-                </div>
-            </div>                                     
+            </div>
         </div>
         
         <div class="clearfix separator">

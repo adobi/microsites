@@ -52,6 +52,10 @@
 	    
 	    if ($('#reviews_press_colorpicker').length) $('#reviews_press_colorpicker').farbtastic('#reviews_press_color');
 	    
+	    if ($('#page_link_colorpicker').length) $('#page_link_colorpicker').farbtastic('#page_link_color');
+	    
+	    if ($('#page_active_colorpicker').length) $('#page_active_colorpicker').farbtastic('#page_active_color');
+	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');

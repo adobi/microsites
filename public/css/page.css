@@ -90,15 +90,11 @@
     margin-bottom:9px!important;
 }
 
-.clearfix {
-   
-}
-
 .section-content .clearfix:nth-child(even) {
     background:#fafafa;
     border-top:1px solid #f1f1f1;
     border-bottom:1px solid #f1f1f1;
-    margin-bottom:9px!important;
+    margin-bottom:0px!important;
 }
 
 .section-content .clearfix:nth-child(odd) {
@@ -107,4 +103,16 @@
 
 .section-content .clearfix {
     padding:9px 0;
+}
+
+
+.section-content .clearfix.separator {
+    padding:0;
+    padding-bottom:5px;
+    margin-bottom:9px!important;
+    margin-left:30px;
+}
+
+.section-content .separator label {
+    width:160px;
 }

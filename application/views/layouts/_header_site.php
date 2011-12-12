@@ -96,7 +96,19 @@
                 .review-item .press {
                     color: <?php echo $site->reviews_press_color ?>;
                 }
-            <?php endif ?>              
+            <?php endif ?>  
+            
+            <?php if ($site->page_link_color): ?>
+                .slide-pagination li a {
+                    background: <?php echo $site->page_link_color ?>;
+                }
+            <?php endif ?>  
+            
+            <?php if ($site->page_active_color): ?>
+                .slide-pagination li a:hover, .slide-pagination li.current a {
+                    background: <?php echo $site->page_active_color ?>;
+                }
+            <?php endif ?>                          
         </style>
         
     <?php endif ?>
