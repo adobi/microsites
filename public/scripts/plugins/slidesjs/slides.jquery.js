@@ -467,6 +467,13 @@
 				if (current != clicked) {
 					animate('pagination', paginationEffect, clicked);
 				}
+                
+				var currentSlide = $($('.slides_container .slide')[current]);
+				
+				GA.track(currentSlide);
+				
+                console.log('pagination clicked, index: ', current, ', element: ', currentSlide);
+				
 				return false;
 			});
 			
@@ -482,6 +489,7 @@
 				if (current != clicked) {
 					animate('pagination', paginationEffect, clicked);
 				}
+				
 				return false;
 			});
 		

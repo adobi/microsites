@@ -98,14 +98,69 @@
 	        $(this).next('.section-content:first').toggle();
 	    });
 	    
+			
+        $('.separator').find('strong').wrap('<a href="javascript:;"></a>');
+        $('.separator').find('strong').append('<span  style = " margin-left:2px;font-family:verdana;">»</span>');	    
+	    
         $('.datepicker').datepicker({
             dateFormat: 'yy-mm-dd',
             changeYear: true,
             changeMonth: true,
             showMonthAfterYear:true,
             yearRange: '1980:+5'
-        });	    
-    
+        });	  
+        
+        $( "#image-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#image-sortable').sortable('toArray');
+                data[name] = value;
+                
+                $.post(App.URL+"image/update_order", data, function() {});
+            }
+        });
+		$( "#image-sortable" ).disableSelection();          
+
+        $( "#store-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#store-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"store/update_order", data, function() {});
+            }
+        });
+		$( "#store-sortable" ).disableSelection();    
+
+
+        $( "#video-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#video-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"video/update_order", data, function() {});
+            }
+        });
+		$( "#video-sortable" ).disableSelection();       
 	})
 	
 }) (jQuery);

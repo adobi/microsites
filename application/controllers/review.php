@@ -77,6 +77,8 @@ class Review extends MY_Controller
             }
         }
         
+        $this->template->set_partial('event_tracking', '_partials/event_tracking');
+        
         $this->template->build('review/edit', $data);
     }
     

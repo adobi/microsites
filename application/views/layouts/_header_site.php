@@ -15,6 +15,31 @@
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
         
+        <script type="text/javascript">
+            var GA = {
+                track: function(elem) 
+                {
+    	            var category = elem.attr('data-ga-category'),
+    	                action = elem.attr('data-ga-action'),
+    	                label = elem.attr('data-ga-label'),
+    	                value = elem.attr('data-ga-value'),
+    	                nonInteraction = elem.attr('data-ga-noninteraction');
+                    
+        	        if (category && action && label && value) {
+        	            
+            	        if (nonInteraction == '1') {
+            	            
+                	        _gaq.push(['_trackEvent', category, action, label, value]);
+            	        } else {
+            	            
+                	        _gaq.push(['_trackEvent', category, action, label, value, true]);
+            	        }
+            	        
+            	        console.log('ga track event: ', elem);
+        	        }                
+                }
+            }
+        </script>
 
         <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/slidesjs/slides.jquery.js"></script>
          
@@ -105,28 +130,12 @@
             	    //$('.game-info h1, .available-on h2, .reviews h2').lettering();
             	    
             	    $('[data-ga=1]').bind('click', function() {
-            	        var self = $(this),
-            	            category = self.attr('data-ga-category'),
-            	            action = self.attr('data-ga-action'),
-            	            label = self.attr('data-ga-label'),
-            	            value = self.attr('data-ga-value'),
-            	            nonInteraction = self.attr('data-ga-noninteraction');
+            	        var self = $(this);
                         
-            	        if (category && action && label && value) {
-            	            
-                	        if (nonInteraction == '1') {
-                	            
-                    	        _gaq.push(['_trackEvent', category, action, label, value]);
-                	        } else {
-                	            
-                    	        _gaq.push(['_trackEvent', category, action, label, value, true]);
-                	        }
-                	        
-                	        console.log('ga track event: ', self);
-            	        }
+            	        GA.track(self);
             	        
             	        return true;
-            	    })
+            	    });
                 });
             }) (jQuery)
         </script>
