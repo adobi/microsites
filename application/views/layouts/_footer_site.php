@@ -27,9 +27,7 @@
             	            
                 	        _gaq.push(['_trackEvent', category, action, label, value, true]);
             	        } else {
-            	            var data = ['_trackEvent', category, action, label, value];
-            	            console.log(data);
-                	        _gaq.push(data);
+                	        _gaq.push(['_trackEvent', category, action, label, value]);
             	        }
             	        
             	        //console.log('ga track event: ', elem);

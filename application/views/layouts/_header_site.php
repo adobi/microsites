@@ -21,11 +21,14 @@
     <?php if ($site): ?>
         
         <style type="text/css">
+            body {
+                background: <?php echo $site->body_background_color ?>
+            }        
             .container {
                 background: <?php echo $site->background_color ?>
             }
             .content {
-                background-image:url('<?php echo base_url() ?>uploads/<?php echo $site->background_image ?>');
+                background-image:url('<?php echo base_url() ?>uploads/original/<?php echo $site->background_image ?>');
                 background-color: <?php echo $site->background_color ?>;
                 
             }

@@ -106,21 +106,15 @@
         </div>               
         <div class="section-content">
             <div class="clearfix">
-                <label for="font_color">Font color</label>
+                <label for="body_background_color">Body background color</label>
                 <div class="input">
-                    <input type="text" name = "font_color" id = "font_color" class = "small" value = "<?php echo $item ? ($item->font_color ? $item->font_color : '#')  : '#' ?>"/>
-                    <div id="font_colorpicker"></div>
+                    <input type="text" name = "body_background_color" id = "body_background_color" class = "small" value = "<?php echo $item ? ($item->body_background_color ? $item->body_background_color : '#') : '#' ?>"/>
+                    <div id="body_colorpicker"></div>
                 </div>
-            </div> 
+            </div>        
+
             <div class="clearfix">
-                <label for="link_color">Link color</label>
-                <div class="input">
-                    <input type="text" name = "link_color" id = "link_color" class = "small" value = "<?php echo $item ? ($item->link_color ? $item->link_color : '#')  : '#' ?>"/>
-                    <div id="link_colorpicker"></div>
-                </div>
-            </div>  
-            <div class="clearfix">
-                <label for="background_color">Background color</label>
+                <label for="background_color">Container background color</label>
                 <div class="input">
                     <input type="text" name = "background_color" id = "background_color" class = "small" value = "<?php echo $item ? ($item->background_color ? $item->background_color : '#') : '#' ?>"/>
                     <div id="background_colorpicker"></div>
@@ -143,6 +137,20 @@
                     <?php endif ?>
                 </div>
             </div>
+            <div class="clearfix">
+                <label for="font_color">Font color</label>
+                <div class="input">
+                    <input type="text" name = "font_color" id = "font_color" class = "small" value = "<?php echo $item ? ($item->font_color ? $item->font_color : '#')  : '#' ?>"/>
+                    <div id="font_colorpicker"></div>
+                </div>
+            </div> 
+            <div class="clearfix">
+                <label for="link_color">Link color</label>
+                <div class="input">
+                    <input type="text" name = "link_color" id = "link_color" class = "small" value = "<?php echo $item ? ($item->link_color ? $item->link_color : '#')  : '#' ?>"/>
+                    <div id="link_colorpicker"></div>
+                </div>
+            </div>              
         </div>
         <div class="actions">
             <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn" href="<?php echo base_url() ?>microsite">Cancel</a>
