@@ -83,7 +83,7 @@
                 <td colspan="2"></td>
             {{/if}}
             <td class="delete">
-    	    <button data-type="${delete_type}" data-url="${delete_url}">Delete</button>
+    	     <!-- <button data-type="${delete_type}" data-url="${delete_url}">Delete</button> -->
             </td>
         </tr>
     </script>
@@ -96,16 +96,31 @@
 
 <?php if ($items): ?>
     
-    <fieldset class="media-grid span-16" style="padding-left:20px;">
-          <?php foreach ($items as $item): ?>
-              <div style="float:left; margin-right:10px; margin-bottom:10px; background:#eee; padding:5px;">
-                  <a href="#" style="margin-left:0px;" class="media-a dialog-image">
-                       <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" class="thumbnail" style="width:210px; height:150px; "/>
-                  </a>
-                  <p style="text-align:right">
-                      <a style="float:right; margin:0px;" href="<?php echo base_url() ?>microsite/delete_site_image/<?php echo $item->id ?>">delete</a>
+    <fieldset class = "sortable-wrapper">
+        <?php echo form_open() ?>
+        <ul id="image-sortable" class="media-grid span-16" style="padding-left:20px;">
+            
+          <?php foreach ($items as $i => $item): ?>
+              <li class="sortable-item" id = "<?php echo $item->id ?>">
+                  <span class="span3" style="width:290px;display:inline-block; text-align:center;">
+                      <a href="#" style="margin-left:0px; max-width:280px; width:100%" class="media-a">
+                          <span style="display:inline-block; max-width:280px; height:210px;">
+                            <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" class="thumbnail"/>
+                          </span>
+                      </a>
+                  </span>
+                  <p class="item-nav">
+                      <a href="<?php echo base_url() ?>image/analytics/<?php echo $item->id ?>">analytics
+                        <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
+                            ✔
+                        <?php endif ?>
+                      
+                      </a>
+                      <a href="<?php echo base_url() ?>microsite/delete_site_image/<?php echo $item->id ?>">delete</a>
                   </p>
-              </div>
+              </li>
           <?php endforeach ?>
+        </ul>
+        <?php echo form_close() ?>
     </fieldset>  
 <?php endif ?>

@@ -94,7 +94,7 @@ class Storetype extends MY_Controller
         if ($item && $item->logo) {
             $this->load->config('upload');
             
-            @unlink($this->config->item('upload_path') . $item->logo);
+            @unlink($this->config->item('upload_path_base') . $item->logo);
         }
         
         if (!$withRecord) {

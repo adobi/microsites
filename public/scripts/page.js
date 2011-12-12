@@ -40,6 +40,8 @@
 	    
 	    if ($('#section_title_colorpicker').length) $('#section_title_colorpicker').farbtastic('#section_title_color');
 	    
+	    if ($('#body_colorpicker').length) $('#body_colorpicker').farbtastic('#body_background_color');
+	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');
@@ -52,23 +54,21 @@
 	        
 	        return false;
 	    });
-	    /*
-	    $('body').delegate('.edit-review', 'click', function() {
-	        
-	        var self = $(this), form = $('#edit-review-form'), item = self.parents('.item:first');
-	        //console.log(form, item);
-	        form.find('[name=title]').val(item.find('.title').find('a').html());
-	        form.find('[name=description]').val(item.find('.description').html());
-	        form.find('[name=url]').val(item.find('.title').find('a').attr('href'));
-	        form.append($('<input />', {type: 'hidden', name: 'id', value: self.attr('data-id')}));
-	        
-    	    $('#rate-star').raty('start', item.find('.star').attr('data-rate'))
-	        
-	        $.scrollTo($('.container'));
-	        
-	        return false;
-	    });	
-	    */
+
+        $('#loading-global')
+           .ajaxStart(function() {
+                
+        		$(this).show();
+           })
+           .ajaxStop(function() {
+        		var self = $(this);
+                self.html('Done!');
+                
+                setTimeout(function() {
+                    self.html('Working...');
+                    self.hide();
+                }, 1500)
+            });
 	    
 	    $('#rate-star').each(function(i, v) {
 	        var self = $(v);
@@ -98,14 +98,86 @@
 	        $(this).next('.section-content:first').toggle();
 	    });
 	    
+			
+        $('.separator').find('strong').wrap('<a href="javascript:;"></a>');
+        $('.separator').find('strong').append('<span  style = " margin-left:2px;font-family:verdana;">»</span>');	    
+	    
         $('.datepicker').datepicker({
             dateFormat: 'yy-mm-dd',
             changeYear: true,
             changeMonth: true,
             showMonthAfterYear:true,
             yearRange: '1980:+5'
-        });	    
-    
+        });	  
+        
+        $( "#image-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#image-sortable').sortable('toArray');
+                data[name] = value;
+                
+                $.post(App.URL+"image/update_order", data, function() {});
+            }
+        });
+		$( "#image-sortable" ).disableSelection();          
+
+        $( "#store-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#store-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"store/update_order", data, function() {});
+            }
+        });
+		$( "#store-sortable" ).disableSelection();    
+
+
+        $( "#video-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#video-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"video/update_order", data, function() {});
+            }
+        });
+		$( "#video-sortable" ).disableSelection();  
+		
+        $( "#review-sortable" ).sortable({
+            //placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                //console.log(event, ui);
+                //console.log($('#sortable').sortable('toArray'));
+                var name = $('.sortable-wrapper').find('[type=hidden]').attr('name'),
+                    value = $('.sortable-wrapper').find('[type=hidden]').attr('value');
+                
+                var data = {};
+                data['order'] = $('#review-sortable').sortable('toArray');
+                data[name] = value;
+                //console
+                $.post(App.URL+"review/update_order", data, function() {});
+            }
+        });
+		$( "#review-sortable" ).disableSelection(); 		     
 	})
 	
 }) (jQuery);

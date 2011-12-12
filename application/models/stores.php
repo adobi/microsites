@@ -14,7 +14,7 @@ class Stores extends MY_Model
             return false;
         }
         
-        return $this->execute("select st.logo, s.* from store s join store_type st on s.type_id = st.id where s.site_id=$site");
+        return $this->execute("select st.logo, s.* from store s join store_type st on s.type_id = st.id where s.site_id=$site order by `order` asc");
     }
     
     public function find($id) 

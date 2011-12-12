@@ -12,16 +12,6 @@
         <link rel = "stylesheet" href="<?= base_url() ?>css/site.css" media="all" />
         
         <script src = "http://code.jquery.com/jquery-1.7.min.js"></script>
-        <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
-        <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
-        
-
-        <script type="text/javascript" src="<?php echo base_url() ?>scripts/plugins/slidesjs/slides.jquery.js"></script>
-         
-        <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.css" media="all" />
-        <script src="<?php echo base_url() ?>scripts/plugins/fancybox/jquery.fancybox-1.3.4.js"></script>
-        <script src="<?php echo base_url(); ?>scripts/plugins/raty/js/jquery.raty.min.js"></script>    	    
-  	    
         <script type="text/javascript">
             BASE_URL = "<?php echo base_url() ?>";
         </script>
@@ -31,11 +21,14 @@
     <?php if ($site): ?>
         
         <style type="text/css">
-            body, .container {
+            body {
+                background: <?php echo $site->body_background_color ?>
+            }        
+            .container {
                 background: <?php echo $site->background_color ?>
             }
             .content {
-                background-image:url('<?php echo base_url() ?>uploads/<?php echo $site->background_image ?>');
+                background-image:url('<?php echo base_url() ?>uploads/original/<?php echo $site->background_image ?>');
                 background-color: <?php echo $site->background_color ?>;
                 
             }
@@ -75,88 +68,36 @@
                 }
             <?php endif ?>                        
         </style>
-        <script type="text/javascript">
-            (function($) {
-                $(function() {
-                    //$('.pills').pills();
-    
-                    $('#slideshow').slides({
-                        width: 450,
-                        height: 350,
-                        //play: 5000,
-                        //pause: 2500,  
-                        effect: 'slide, fade',
-                        hoverPause: true,
-                        paginationClass: 'slide-pagination'                                     
-                    });
-                    
-                    //$("[rel=fancybox]").fancybox();    
-                    
-                    $('.star').each(function(i, v) {
-            	        var self = $(v);
-            	        
-            	        self.raty({
-            	            path: App.URL + 'scripts/plugins/raty/img/',
-            	            start: self.attr('data-rate'), 
-            	            readOnly:true
-                        });
-            	    });                            
-                    
-            	    //$('.game-info h1, .available-on h2, .reviews h2').lettering();
-            	    
-            	    $('[data-ga=1]').bind('click', function() {
-            	        var self = $(this),
-            	            category = self.attr('data-ga-category'),
-            	            action = self.attr('data-ga-action'),
-            	            label = self.attr('data-ga-label'),
-            	            value = self.attr('data-ga-value'),
-            	            nonInteraction = self.attr('data-ga-noninteraction');
-                        
-            	        if (category && action && label && value) {
-            	            
-                	        if (nonInteraction == '1') {
-                	            
-                    	        _gaq.push(['_trackEvent', category, action, label, value]);
-                	        } else {
-                	            
-                    	        _gaq.push(['_trackEvent', category, action, label, value, true]);
-                	        }
-                	        
-                	        console.log('ga track event: ', self);
-            	        }
-            	        
-            	        return true;
-            	    })
-                });
-            }) (jQuery)
-        </script>
         
     <?php endif ?>
     
     <body>  
-
-        <div id="fb-root"></div>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '<?php echo $site->app_id ?>', // App ID
-              status     : true, // check login status
-              cookie     : true, // enable cookies to allow the server to access the session
-              oauth      : true, // enable OAuth 2.0
-              xfbml      : true  // parse XFBML
-            });
-        
-            FB.Canvas.setAutoGrow();
-          };
-        
-          // Load the SDK Asynchronously
-          (function(d){
-             var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-             js = d.createElement('script'); js.id = id; js.async = true;
-             js.src = "//connect.facebook.net/en_US/all.js";
-             d.getElementsByTagName('head')[0].appendChild(js);
-           }(document));
-        </script>        
+        <?php if ($site->app_id): ?>
+            
+            <div id="fb-root"></div>
+            <script>
+              window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '<?php echo $site->app_id ?>', // App ID
+                  status     : true, // check login status
+                  cookie     : true, // enable cookies to allow the server to access the session
+                  oauth      : true, // enable OAuth 2.0
+                  xfbml      : true  // parse XFBML
+                });
+            
+                FB.Canvas.setAutoGrow();
+              };
+            
+              // Load the SDK Asynchronously
+              (function(d){
+                 var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+                 js = d.createElement('script'); js.id = id; js.async = true;
+                 js.src = "//connect.facebook.net/en_US/all.js";
+                 d.getElementsByTagName('head')[0].appendChild(js);
+               }(document));
+            </script>        
+        <?php endif ?>
+            
         <?php if ($site->ga_code): ?>
             <script type="text/javascript">
                 <?php echo $site->ga_code ?>

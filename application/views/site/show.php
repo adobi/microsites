@@ -13,7 +13,13 @@
         	        <div class="slides_container span8">
             	        <?php if (isset($videos) && $videos): ?>
             	            <?php foreach ($videos as $item): ?>
-                                <div>
+                                <div class="slide"
+                                    data-ga-category = "<?php echo $item->ga_category ?>"
+                                    data-ga-action = "<?php echo $item->ga_action ?>" 
+                                    data-ga-label = "<?php echo $item->ga_label ?>" 
+                                    data-ga-value = "<?php echo $item->ga_value ?>" 
+                                    data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
+                                >
                                     <?php echo htmlspecialchars_decode($item->video) ?>
                                 </div>                                                              	            
             	            <?php endforeach ?>
@@ -21,14 +27,19 @@
             	        <?php endif ?>
             	        <?php if (isset($images) && $images): ?>
             	            <?php foreach ($images as $item): ?>
-                                <div>
+
+                                <div class="slide"  style="tex-talign:center;"
+                                    data-ga-category = "<?php echo $item->ga_category ?>"
+                                    data-ga-action = "<?php echo $item->ga_action ?>" 
+                                    data-ga-label = "<?php echo $item->ga_label ?>" 
+                                    data-ga-value = "<?php echo $item->ga_value ?>" 
+                                    data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
+                                >
                                     <!-- 
                                     <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                                      -->
-                                        <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
-                                    <!-- 
-                                    </a>
-                                     -->
+                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
+                                    <!-- </a> -->
                                 </div>                                                              	            
             	            <?php endforeach ?>
 

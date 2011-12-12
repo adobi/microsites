@@ -76,6 +76,8 @@ class Store extends MY_Controller
             
         }
         
+        $this->template->set_partial('event_tracking', '_partials/event_tracking');
+        
         $this->template->build('store/edit', $data);
     }
     
@@ -91,4 +93,18 @@ class Store extends MY_Controller
         
         redirect($_SERVER['HTTP_REFERER']);
     }
+    
+    public function update_order()
+    {
+        if ($_POST && isset($_POST['order'])) {
+            
+            $this->load->model('Stores', 'model');
+            
+            foreach ($_POST['order'] as $order => $id) {
+                $this->model->update(array('order'=>$order), $id);
+            }
+        }
+        
+        die;
+    }    
 }

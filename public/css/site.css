@@ -48,8 +48,9 @@
 }
 .slides_container div {
     width:450px;
-    height:350px;
+    height:340px;
     display:block;
+    text-align:center;
 }      
 
 .pagination-wrapper {
@@ -185,4 +186,8 @@
     opacity:0;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
+}
+
+.section-content .clearfix:nth-child(2n+1) {
+    background:#f5f5f5;
 }

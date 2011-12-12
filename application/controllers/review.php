@@ -77,6 +77,8 @@ class Review extends MY_Controller
             }
         }
         
+        $this->template->set_partial('event_tracking', '_partials/event_tracking');
+        
         $this->template->build('review/edit', $data);
     }
     
@@ -114,7 +116,7 @@ class Review extends MY_Controller
         if ($item && $item->press_logo) {
             $this->load->config('upload');
             
-            @unlink($this->config->item('upload_path') . $item->press_logo);
+            @unlink($this->config->item('upload_path_base') . $item->press_logo);
         }
         
         if (!$withRecord) {
@@ -123,5 +125,20 @@ class Review extends MY_Controller
         }
         
         return $withRecord ? $this->model->delete($id) : true;
-    }    
+    }   
+    
+    
+    public function update_order()
+    {
+        if ($_POST && isset($_POST['order'])) {
+            
+            $this->load->model('Reviews', 'model');
+            
+            foreach ($_POST['order'] as $order => $id) {
+                $this->model->update(array('order'=>$order), $id);
+            }
+        }
+        
+        die;
+    }     
 }
