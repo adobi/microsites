@@ -27,7 +27,7 @@
             	        <?php endif ?>
             	        <?php if (isset($images) && $images): ?>
             	            <?php foreach ($images as $item): ?>
-                                <div class="slide"
+                                <div class="slide"  style="tex-talign:center;"
                                     data-ga-category = "<?php echo $item->ga_category ?>"
                                     data-ga-action = "<?php echo $item->ga_action ?>" 
                                     data-ga-label = "<?php echo $item->ga_label ?>" 
@@ -37,7 +37,7 @@
                                     <!-- 
                                     <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                                      -->
-                                        <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" title = "" width="450" height="350">
+                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
                                     <!-- </a> -->
                                 </div>                                                              	            
             	            <?php endforeach ?>

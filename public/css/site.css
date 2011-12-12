@@ -48,8 +48,9 @@
 }
 .slides_container div {
     width:450px;
-    height:350px;
+    height:340px;
     display:block;
+    text-align:center;
 }      
 
 .pagination-wrapper {

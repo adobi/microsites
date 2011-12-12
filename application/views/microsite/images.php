@@ -102,8 +102,10 @@
             
           <?php foreach ($items as $i => $item): ?>
               <li class="sortable-item" id = "<?php echo $item->id ?>">
-                  <a href="#" style="margin-left:0px;" class="media-a dialog-image">
-                       <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" class="thumbnail" style="width:210px; height:150px; "/>
+                  <a href="#" style="margin-left:0px;" class="media-a">
+                      <span style="display:inline-block; max-width:450px; height:340px;">
+                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" class="thumbnail"/>
+                      </span>
                   </a>
                   <p class="item-nav">
                       <a href="<?php echo base_url() ?>image/analytics/<?php echo $item->id ?>">analytics

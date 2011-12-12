@@ -191,8 +191,8 @@ class Microsite extends MY_Controller
             $config['source_image'] = $this->config->item('upload_path') .$data['file_name'];;
             //$config['create_thumb'] = TRUE;
             $config['maintain_ratio'] = TRUE;
-            $config['width'] =450;
-            $config['height'] = 350;
+            $config['width'] = $this->config->item('image_width');
+            $config['height'] = $this->config->item('image_height');
             $config['new_image'] = $this->config->item('upload_path') . 'thumbs/'.$data['file_name'];
             
             $this->load->library('image_lib', $config);

@@ -29,6 +29,9 @@
                         
                         <div class="description"><?php echo htmlspecialchars_decode($item->description) ?></div>
                         <p class="item-nav">
+                            <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
+                                ✔
+                            <?php endif ?>                            
                             <a href="<?php echo base_url() ?>review/edit/<?php echo $item->id ?>/site/<?php echo $site->id ?>">edit</a>
                             <a href="<?php echo base_url() ?>review/delete/<?php echo $item->id ?>">delete</a>
                         </p>
