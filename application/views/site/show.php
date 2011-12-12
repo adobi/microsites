@@ -65,7 +65,7 @@
                                         data-ga-value = "<?php echo $item->ga_value ?>" 
                                         data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
                                     >
-                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->logo ?>" alt="">
                                     </a>
                                     <?php if ($item->label): ?>
                                         
@@ -107,7 +107,7 @@
                                     ><?php echo $item->title ?></a>
                                     <span class="pull-right">
                                         <?php if ($item->press_logo): ?>
-                                            <img src="<?php echo base_url() ?>uploads/<?php echo $item->press_logo ?>" alt="<?php echo $item->press ?>" title="<?php echo $item->press ?>">
+                                            <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->press_logo ?>" alt="<?php echo $item->press ?>" title="<?php echo $item->press ?>">
                                         <?php endif ?>           
                                     </span>                         
                                 </h5>

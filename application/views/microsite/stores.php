@@ -17,13 +17,13 @@
                 <a href="<?php echo base_url() ?>store/edit/site/<?php echo $site->id ?>">Add to new store</a>
             </p>
             <?php if ($stores): ?>
-                <ul id="store-sortable">
+                <ul id="store-sortable" style="margin-left:0px;">
                 <?php foreach ($stores as $item): ?>
                     <li class="sortable-item span2" style="width:160px!important;"id = "<?php echo $item->id ?>">
                         <p style="text-align:center"><strong><?php echo $item->label ? $item->label : '&nbsp;' ?></strong></p>
                         <p style="text-align:center">
                             <a href="<?php echo $item->url ?>" target = "_blank">
-                                <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                                <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->logo ?>" alt="">
                             </a>
                         </p> 
                         <p class="item-nav">

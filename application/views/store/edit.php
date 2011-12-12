@@ -29,7 +29,7 @@
                         <div class="span2 item" style="width:160px!important;">
                             <label for="<?php echo $s->id ?>" style="display:inline-block;width:160px;cursor:pointer">
                                 <p style="text-align:center">
-                                        <img src="<?php echo base_url() ?>uploads/<?php echo $s->logo ?>" alt="">
+                                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $s->logo ?>" alt="">
                                 </p> 
                                 <p style="text-align:center">
                                     <input type="radio" name = "type_id" value = "<?php echo $s->id ?>" id = "<?php echo $s->id ?>">
@@ -46,7 +46,7 @@
                 <div class="clearfix">
                     <label for="url">Store</label>
                     <div class="input">
-                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
+                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->logo ?>" alt="">
                     </div>
                 </div>  
             <?php endif ?>

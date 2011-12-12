@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" 
     <?php if ($_SERVER['HTTP_HOST'] !== 'localhost'): ?>
-        style="overflow: hidden"
+        style="overflow: _hidden"
     <?php endif ?>
 >
     <head>
@@ -22,13 +22,13 @@
         
         <style type="text/css">
             body {
-                background: <?php echo $site->body_background_color ?>
+                background: <?php echo $site->body_background_color ?>;
             }        
             .container {
-                background: <?php echo $site->background_color ?>
+                background: <?php echo $site->background_color ?>;
             }
             .content {
-                background-image:url('<?php echo base_url() ?>uploads/<?php echo $site->background_image ?>');
+                background-image:url('<?php echo base_url() ?>uploads/original/<?php echo $site->background_image ?>');
                 background-color: <?php echo $site->background_color ?>;
                 
             }

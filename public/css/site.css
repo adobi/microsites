@@ -1,8 +1,6 @@
 
 .container {
     width:510px !important;
-    background:#f5f5f5;
-    //box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);
     border:1px solid #aaa;
     border:1px solid rgba(0, 0, 0, 0.1);
     *border:1px solid #aaa;
@@ -10,6 +8,9 @@
     -moz-border-radius:6px;
     border-radius:6px;
     margin-top:20px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    
 }
 .content {
      min-height:850px;
