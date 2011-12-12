@@ -42,6 +42,16 @@
 	    
 	    if ($('#body_colorpicker').length) $('#body_colorpicker').farbtastic('#body_background_color');
 	    
+	    if ($('#bubble_border_colorpicker').length) $('#bubble_border_colorpicker').farbtastic('#bubble_border_color');
+	    
+	    if ($('#bubble_background_colorpicker').length) $('#bubble_background_colorpicker').farbtastic('#bubble_background_color');
+	    
+	    if ($('#bubble_colorpicker').length) $('#bubble_colorpicker').farbtastic('#bubble_color');
+	    
+	    if ($('#reviews_link_colorpicker').length) $('#reviews_link_colorpicker').farbtastic('#reviews_link_color');
+	    
+	    if ($('#reviews_press_colorpicker').length) $('#reviews_press_colorpicker').farbtastic('#reviews_press_color');
+	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');

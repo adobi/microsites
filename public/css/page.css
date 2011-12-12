@@ -53,13 +53,6 @@
     display:inline-block;
 }
 
-.separator {
-    background:#E6F4F9;
-    border-radius:4px;
-    padding-bottom:5px;
-    border:1px solid rgba(16,153,199,0.15);
-}
-
 .sortable-item {
     display:inline-block;
     float:left; margin-right:10px; margin-bottom:10px; background:#eee; padding:3px; border-radius:3px;
@@ -84,16 +77,34 @@
     border-bottom-right-radius:5px;
 }
 
+
+.separator {
+    background:#E6F4F9;
+    border-radius:4px;
+    padding-bottom:5px;
+    border:1px solid rgba(16,153,199,0.15);
+    margin-bottom:9px!important;
+}
+
 .section-content {
-    
+    margin-bottom:9px!important;
+}
+
+.clearfix {
+   
 }
 
 .section-content .clearfix:nth-child(even) {
     background:#fafafa;
     border-top:1px solid #f1f1f1;
     border-bottom:1px solid #f1f1f1;
+    margin-bottom:9px!important;
+}
+
+.section-content .clearfix:nth-child(odd) {
+    margin-bottom:0px!important;
 }
 
 .section-content .clearfix {
-    padding:5px 0;
+    padding:9px 0;
 }

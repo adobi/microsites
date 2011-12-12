@@ -47,26 +47,56 @@
             
             <?php if ($site->about_background_color): ?>
                 .game-info {
-                    background: <?php echo $site->about_background_color ?>
+                    background: <?php echo $site->about_background_color ?>;
                 }
             <?php endif ?>
             
             <?php if ($site->reviews_background_color): ?>
                 .reviews {
-                    background: <?php echo $site->reviews_background_color ?>
+                    background: <?php echo $site->reviews_background_color ?>;
                 }
             <?php endif ?>
             <?php if ($site->stores_background_color): ?>
                 .available-on {
-                    background: <?php echo $site->stores_background_color ?>
+                    background: <?php echo $site->stores_background_color ?>;
                 }
             <?php endif ?> 
             
             <?php if ($site->section_title_color): ?>
                 .section-title {
-                    color: <?php echo $site->section_title_color ?>
+                    color: <?php echo $site->section_title_color ?>;
                 }
-            <?php endif ?>                        
+            <?php endif ?>  
+            
+            <?php if ($site->bubble_border_color): ?>
+                .popover.below .arrow {
+                    border-bottom:5px solid <?php echo $site->bubble_border_color ?>;
+                }
+            <?php endif ?> 
+            
+            <?php if ($site->bubble_background_color): ?>
+                .popover .title, .popover .inner {
+                    background: <?php echo $site->bubble_background_color ?>;
+                }
+            <?php endif ?>
+            
+            <?php if ($site->bubble_color): ?>
+                .popover .title {
+                    color: <?php echo $site->bubble_color ?>;
+                }
+            <?php endif ?>  
+            
+            <?php if ($site->reviews_link_color): ?>
+                .review-item .title a {
+                    color: <?php echo $site->reviews_link_color ?>!important;
+                }
+            <?php endif ?>  
+            
+            <?php if ($site->reviews_press_color): ?>
+                .review-item .press {
+                    color: <?php echo $site->reviews_press_color ?>;
+                }
+            <?php endif ?>              
         </style>
         
     <?php endif ?>

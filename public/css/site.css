@@ -99,6 +99,8 @@
 
 .star {
     display:inline-block;
+    position:relative;
+    top:2px;
 }
 
 .game-info, .reviews, .available-on {
@@ -122,7 +124,7 @@
 }
 
 .game-info p, #game-info div, .reviews p, .reviews div, .available-on p, .available-on div {
-    padding:10px 5px;
+    padding:5px 5px;
 }
 
 
@@ -153,29 +155,33 @@
 }
 
 .review-item {
-    border-bottom:2px dashed #d1d1d1;//#DCEAF4;
+    border-bottom:1px solid #d1d1d1;//#DCEAF4;
     width:480px;
+}
+
+.review-item h5 {
+    line-height:18px;
 }
 
 .review-description {
 }
 
 .popover {
-    margin-left:0px;display:inline-block;position:relative;padding:3px 0!important;z-index:inherit;
+    margin-left:0px;display:inline-block;position:relative;padding:5px 0 3px!important;z-index:inherit;
 }
 
 .popover .inner {
     background:#d1d1d1;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     width:105px;
-    padding:2px;
+    padding:3px;
 }
 
 .popover .title {
     background:#f2fcff;
     border-radius:3px;text-align:center;padding:3px 8px;color:#666;
     font-size:0.8em;
-    
+    border-bottom:0px;
 }
 
 .popover.below .arrow {

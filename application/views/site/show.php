@@ -111,7 +111,7 @@
                                         <?php endif ?>           
                                     </span>                         
                                 </h5>
-                                <h6><?php echo $item->press ?> (<?php echo to_date($item->reviewd_at) ?>)</h6>
+                                <h6 class="press"><?php echo $item->press ?> (<?php echo to_date($item->reviewd_at) ?>)</h6>
 
                                 <div class="span8 review-description"><?php echo htmlspecialchars_decode($item->description) ?></div>
                             </div>            	        
