@@ -472,8 +472,6 @@
 				
 				GA.track(currentSlide);
 				
-                console.log('pagination clicked, index: ', current, ', element: ', currentSlide);
-				
 				return false;
 			});
 			
