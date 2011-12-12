@@ -188,16 +188,25 @@ class Microsite extends MY_Controller
 	  	    $data = $this->upload->data();
 
             $config['image_library'] = 'gd2';
-            $config['source_image'] = $this->config->item('upload_path') .$data['file_name'];;
+            $config['source_image'] = $this->config->item('upload_path') . $data['file_name'];
             //$config['create_thumb'] = TRUE;
             $config['maintain_ratio'] = TRUE;
             $config['width'] = $this->config->item('image_width');
             $config['height'] = $this->config->item('image_height');
-            $config['new_image'] = $this->config->item('upload_path') . 'thumbs/'.$data['file_name'];
-            
+            $config['new_image'] = $this->config->item('upload_path_base') .$data['file_name'];
             $this->load->library('image_lib', $config);
-            
             $this->image_lib->resize();
+
+            $config['image_library'] = 'gd2';
+            $config['source_image'] = $this->config->item('upload_path') . $data['file_name'];
+            $config['width'] = $this->config->item('thumb_width');
+            $config['height'] = $this->config->item('thumb_height');
+            $config['new_image'] = $this->config->item('upload_path_base') . 'thumbs/'.$data['file_name'];
+            //$this->load->library('image_lib', $config);
+            $this->image_lib->initialize($config);
+            $this->image_lib->resize();
+            
+            @unlink($this->config->item('upload_path') . $data['file_name']);
             
             $this->load->model('Images', 'model');
             
@@ -211,7 +220,7 @@ class Microsite extends MY_Controller
             $info->size = $data['file_size'];
             $info->type = $data['file_type'];
             $info->url = base_url() . 'uploads/' .$data['file_name'];
-            $info->thumbnail_url = base_url() . 'uploads/thumbs/' .$data['file_name'];//I set this to original file since I did not create thumbs.  change to thumbnail directory if you do = $upload_path_url .'/thumbs' .$data['file_name']
+            $info->thumbnail_url = base_url() . 'uploads/thumbs/' .$data['file_name'];
             $info->delete_url = base_url().'microsite/delete/'.$inserted;
             $info->delete_type = 'DELETE';	 
             
@@ -247,8 +256,8 @@ class Microsite extends MY_Controller
         
         if ($file) {
             
-            @unlink($this->config->item('upload_path') . $file);
-            @unlink($this->config->item('upload_path') . 'thumbs/' . $file);
+            @unlink($this->config->item('upload_path_base') . $file);
+            @unlink($this->config->item('upload_path_base') . 'thumbs/' . $file);
             
         }
         redirect($_SERVER['HTTP_REFERER']);
@@ -303,7 +312,7 @@ class Microsite extends MY_Controller
         if ($item && $item->background_image) {
             $this->load->config('upload');
             
-            @unlink($this->config->item('upload_path') . $item->background_image);
+            @unlink($this->config->item('upload_path_base') . $item->background_image);
         }
         
         if (!$withRecord) {

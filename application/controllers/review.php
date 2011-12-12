@@ -116,7 +116,7 @@ class Review extends MY_Controller
         if ($item && $item->press_logo) {
             $this->load->config('upload');
             
-            @unlink($this->config->item('upload_path') . $item->press_logo);
+            @unlink($this->config->item('upload_path_base') . $item->press_logo);
         }
         
         if (!$withRecord) {

@@ -102,11 +102,13 @@
             
           <?php foreach ($items as $i => $item): ?>
               <li class="sortable-item" id = "<?php echo $item->id ?>">
-                  <a href="#" style="margin-left:0px;" class="media-a">
-                      <span style="display:inline-block; max-width:450px; height:340px;">
-                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" class="thumbnail"/>
-                      </span>
-                  </a>
+                  <span class="span3" style="width:290px;display:inline-block; text-align:center;">
+                      <a href="#" style="margin-left:0px; max-width:280px; width:100%" class="media-a">
+                          <span style="display:inline-block; max-width:280px; height:210px;">
+                            <img src="<?php echo base_url() ?>uploads/thumbs/<?php echo $item->image ?>" alt="" class="thumbnail"/>
+                          </span>
+                      </a>
+                  </span>
                   <p class="item-nav">
                       <a href="<?php echo base_url() ?>image/analytics/<?php echo $item->id ?>">analytics
                         <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
