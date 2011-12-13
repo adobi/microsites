@@ -1,8 +1,8 @@
-
+<!-- 
 <p>
     <a href="<?php echo base_url() ?>microsite/images/<?php echo $item->site_id ?>">&larr; Go back</a>
 </p>
-
+ -->
 <fieldset>
     <legend>Google Analytics</legend>
     <?php echo form_open() ?>
@@ -18,7 +18,7 @@
         <?php echo $template['partials']['event_tracking'] ?>
 
         <div class="actions">
-            <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn" href="<?php echo base_url() ?>microsite">Cancel</a>
+            <input type="submit" value="Save" class="btn primary"> &nbsp; <a class="btn close-dialog" href="#">Cancel</a>
         </div>       
 
     <?php echo form_close() ?>

@@ -56,6 +56,8 @@
 	    
 	    if ($('#page_active_colorpicker').length) $('#page_active_colorpicker').farbtastic('#page_active_color');
 	    
+	    if ($('#game_title_colorpicker').length) $('#game_title_colorpicker').farbtastic('#game_title_color');
+	    
 	    $('body').delegate('.edit-video', 'click', function() {
 	        
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');
@@ -191,7 +193,51 @@
                 $.post(App.URL+"review/update_order", data, function() {});
             }
         });
-		$( "#review-sortable" ).disableSelection(); 		     
+		$( "#review-sortable" ).disableSelection(); 
+		
+        $('body').delegate('a[rel*=dialog]', 'click', function() {
+            
+            $('.dialog').remove();
+            
+            var self = $(this);
+            
+            
+            var elem = $('<div />', {'class': 'dialog', id: 'dialog_'+(new Date()).getTime(), title: self.attr('title')}).html('<p style = "width: 300px;text-align:center"><img src = "'+App.URL+'images/pie.gif" /></p>');
+    
+            elem.dialog({
+                modal: false,
+                width: 'auto',
+                minWidth: 500,
+                position:[Math.floor((window.innerWidth / 2)-150),  70],
+                open: function(event, ui) {
+                    
+                    $.get(self.attr('href'), function(response) {
+                        elem.html(response);
+                        //alert(window.innerHeight);
+                        elem.dialog('option', 'position', [Math.floor(((window.innerWidth  - elem.width()) / 2)), window.pageYOffset]);
+                        $('.ui-dialog').css('top',  window.pageYOffset + 70);
+                        
+                        
+                        //elem.find('form p:last').append('<button class = "close-dialog">Mégsem</button>');
+                    });
+                    
+                }
+            });
+            
+            return false;
+        });	
+        
+        $('body').delegate('.close-dialog', 'click', function() {
+            
+            $('.ui-dialog-titlebar-close').trigger('click');
+            
+            return false;
+        });        
+        /*
+        $('#image-sortable').masonry({
+            itemSelector : '.sortable-item',
+        });        			     
+        */
 	})
 	
 }) (jQuery);

@@ -90,6 +90,14 @@
             </div>
             <div class="section-content">
                 <div class="clearfix">
+                    <label for="game_title_color">Title color</label>
+                    <div class="input">
+                        <input type="text" name = "game_title_color" id = "game_title_color" class = "small" value = "<?php echo $item ? ($item->game_title_color ? $item->game_title_color : '#')  : '#' ?>"/>
+                        <div id="game_title_colorpicker"></div>
+                    </div>
+                </div> 
+
+                <div class="clearfix">
                     <label for="about_background_color">Description background color</label>
                     <div class="input">
                         <input type="text" name = "about_background_color" id = "about_background_color" class = "small" value = "<?php echo $item ? ($item->about_background_color ? $item->about_background_color : '#')  : '#' ?>"/>

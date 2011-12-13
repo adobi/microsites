@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" 
     <?php if ($_SERVER['HTTP_HOST'] !== 'localhost'): ?>
-        style="overflow: _hidden"
+        style="overflow: hidden"
     <?php endif ?>
 >
     <head>
@@ -32,6 +32,13 @@
                 background-color: <?php echo $site->background_color ?>;
                 
             }
+            
+            
+            <?php if ($site->game_title_color): ?>
+                .game-title {
+                    color: <?php echo $site->game_title_color ?>;
+                }
+            <?php endif ?>            
             
             .review-item {
                 //border-bottom:10px solid <?php echo $site->background_color ?>;

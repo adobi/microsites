@@ -47,7 +47,7 @@
             	    </div>
         	    </div>
         	    <div class="span8 game-info">
-        	        <h1><?php echo $site->name ?></h1>
+        	        <h1 class="game-title"><?php echo $site->name ?></h1>
         	        <h2 class="section-title"><?php echo $site->title ?></h2>
         	        <p><?php echo $site->description ?></p>
         	    </div>

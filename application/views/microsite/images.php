@@ -109,8 +109,27 @@
                           </span>
                       </a>
                   </span>
+                  <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
+                      <!-- 
+                      <ul style="list-style-type:circle; margin-top:-15px;">
+                          <li style="clear:both; display:list-item">
+                              <strong>Category</strong>: <?php echo $item->ga_category ?> 
+                          </li>
+                          <li style="clear:both; display:list-item">
+                              <strong>Action</strong>: <?php echo $item->ga_action ?> 
+                          </li>
+                          <li style="clear:both; display:list-item">
+                              <strong>Value</strong>: <?php echo $item->ga_value ?>
+                          </li>
+                          <li style="clear:both; display:list-item">
+                              <strong>Label</strong>: <?php echo $item->ga_label ?>
+                          </li>
+                      </ul>
+                     -->
+                  <?php endif ?>
+
                   <p class="item-nav">
-                      <a href="<?php echo base_url() ?>image/analytics/<?php echo $item->id ?>">analytics
+                      <a rel = "dialog" title = "Analytics settings" href="<?php echo base_url() ?>image/analytics/<?php echo $item->id ?>">analytics
                         <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
                             ✔
                         <?php endif ?>
