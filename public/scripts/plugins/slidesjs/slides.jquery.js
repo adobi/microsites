@@ -470,7 +470,15 @@
                 
 				var currentSlide = $($('.slides_container .slide')[current]);
 				
-				GA.track(currentSlide);
+				if (!currentSlide.hasClass('video-play')) {
+				    //console.log('ga track event image');
+					GA.track(currentSlide);
+				} else {
+				    
+				    if (currentSlide.find('iframe').length) {
+				        currentSlide.load(BASE_URL+'site/video_image/'+currentSlide.attr('data-video-id'));
+				    }
+				}
 				
 				return false;
 			});

@@ -63,7 +63,7 @@
 	        var self = $(this), form = $('#edit-video-form'), item = self.parents('.item:first');
 	        //console.log(form, item);
 	        form.find('[name=title]').val(item.find('.title').html());
-	        form.find('[name=video]').val(item.find('.video').html());
+	        form.find('[name=video]').val(item.find('.video').attr('data-video-id'));
 	        form.append($('<input />', {type: 'hidden', name: 'id', value: self.attr('data-id')}));
 	        
 	        $.scrollTo($('.container'));

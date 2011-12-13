@@ -1,8 +1,8 @@
-
+<!-- 
 <p>
     <a href="<?php echo base_url() ?>microsite/videos/<?php echo $item->site_id ?>">&larr; Go back</a>
 </p>
-
+ -->
 <fieldset>
     <legend>Google Analytics</legend>
     <?php echo form_open() ?>

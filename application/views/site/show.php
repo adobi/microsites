@@ -13,14 +13,15 @@
         	        <div class="slides_container span8">
             	        <?php if (isset($videos) && $videos): ?>
             	            <?php foreach ($videos as $item): ?>
-                                <div class="slide"
+                                <div class="slide video-play" data-video-id = "<?php echo $item->video ?>"
                                     data-ga-category = "<?php echo $item->ga_category ?>"
                                     data-ga-action = "<?php echo $item->ga_action ?>" 
                                     data-ga-label = "<?php echo $item->ga_label ?>" 
                                     data-ga-value = "<?php echo $item->ga_value ?>" 
                                     data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
                                 >
-                                    <?php echo htmlspecialchars_decode($item->video) ?>
+                                    <?php //echo htmlspecialchars_decode($item->video) ?>
+                                    <?php echo youtube_video_image($item->video) ?>
                                 </div>                                                              	            
             	            <?php endforeach ?>
 

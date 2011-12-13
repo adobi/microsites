@@ -35,4 +35,16 @@ class Site extends MY_Controller
         
         $this->template->build('site/show', $data);
     }
+    
+    public function video()
+    {
+        echo embed_youtube($this->uri->segment(3), true);
+        die;
+    }
+    
+    public function video_image()
+    {
+        echo youtube_video_image($this->uri->segment(3));
+        die;
+    }
 }

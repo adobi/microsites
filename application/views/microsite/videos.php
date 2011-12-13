@@ -22,10 +22,14 @@
         </div>    
     
         <div class="clearfix">
-            <label for="video">Embed code</label>
+            <label for="video">Youtube video id</label>
             <div class="input">
+                <input type="text" name = "video" id = "video" class = "xxlarge" />
+                <span class="help-block">http://www.youtube.com/watch?v=<strong>1P3MegpkaMI</strong></span>
+                <!-- 
                 <textarea rows="3" name="video" id="video" class="xxlarge"></textarea>
-                <span class="help-block">Set the video size to 450x350.</span>
+                
+                 -->
             </div>
         </div>
             
@@ -42,9 +46,9 @@
             <?php foreach ($items as $item): ?>
                 <li class="span8 sortable-item item " id="<?php echo $item->id ?>">
                     <h4 class = "title"><?php echo $item->title ?></h4>
-                    <div class="video" style="margin-bottom:10px;"><?php echo htmlspecialchars_decode($item->video) ?></div>
+                    <div class="video" style="margin-bottom:10px;" data-video-id = "<?php echo $item->video ?>"><?php echo embed_youtube($item->video) ?></div>
                     <p class="item-nav">
-                        <a href="<?php echo base_url() ?>video/analytics/<?php echo $item->id ?>">
+                        <a rel = "dialog" title = "Analytics settings" href="<?php echo base_url() ?>video/analytics/<?php echo $item->id ?>">
                             analytics
                             <?php if ($item->ga_category && $item->ga_action && $item->ga_label && $item->ga_value): ?>
                                 ✔

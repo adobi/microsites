@@ -201,3 +201,8 @@
 .section-content .clearfix:nth-child(2n+1) {
     background:#f5f5f5;
 }
+
+.video-play {
+    background:url(../images/play-overlay3.png) no-repeat transparent;
+    cursor:pointer!important;
+}

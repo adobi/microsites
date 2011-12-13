@@ -81,6 +81,16 @@
                 	        
                 	        return true;
                 	    });
+                	    
+                	    $('body').delegate('.video-play', 'click', function() {
+                	        var self = $(this);
+                	        
+                	        GA.track(self);
+                	        
+                	        self.load(BASE_URL+'site/video/'+self.attr('data-video-id'));
+                	        
+                	        return false;
+                	    });
                     });
                 }) (jQuery)
             </script>
