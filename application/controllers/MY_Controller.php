@@ -11,5 +11,10 @@ class MY_Controller extends CI_Controller
     {
 
         parent::__construct();
+        
+        if ($this->uri->segment(1) !== 'auth' && !$this->session->userdata('logged_in')) {
+            
+            redirect(base_url() . 'auth/login');
+        }
     }
 }

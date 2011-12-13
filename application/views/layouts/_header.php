@@ -20,9 +20,9 @@
         
     <div id="fb-root"></div>	
     
-    <div class="container <?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review', 'storetype', 'store', 'image', 'video')) ? 'span16' : 'span8' ?>" id="top">
+    <div class="container <?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review', 'storetype', 'store', 'image', 'video', 'auth')) ? 'span16' : 'span8' ?>" id="top">
     	<div class="content">
-        <?php //if ($this->session->userdata('logged_in') && $this->uri->segment(1) === 'manage'): ?>
+        <?php if ($this->session->userdata('logged_in')): ?>
             
             <h3>Microsite management</h3>
             <div class="span16" id="main-nav">
@@ -35,7 +35,7 @@
 					</li>
                     
 					<li <?php echo $this->uri->segment(2) === 'logout' ? 'class = "active"' : '' ?>>
-						<a href="<?php echo base_url() ?>">Logout</a>
+						<a href="<?php echo base_url() ?>auth/logout">Logout</a>
 					</li>
                 </ul>
             </div>
@@ -44,5 +44,4 @@
                     //jQuery('#main-nav').dropdown()
                 })
             </script>
-
-        <?php //endif ?>
+        <?php endif ?>
