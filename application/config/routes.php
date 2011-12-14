@@ -41,7 +41,7 @@
 $route['default_controller'] = "microsite";
 $route['404_override'] = '';
 
-$route['s/(:any)'] = 'site/show/$1';
+$route['social/(:any)'] = 'site/show/$1';
 
 
 /* End of file routes.php */
