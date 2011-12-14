@@ -10610,3 +10610,654 @@ DEBUG - 2011-12-13 14:14:42 --> Form Validation Class Initialized
 DEBUG - 2011-12-13 14:14:42 --> Model Class Initialized
 DEBUG - 2011-12-13 14:14:42 --> Upload Class Initialized
 DEBUG - 2011-12-13 14:14:42 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Config Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:44:28 --> URI Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Router Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Output Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Security Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Input Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:44:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:44:28 --> Language Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:44:28 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Session Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:44:28 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Session routines successfully run
+DEBUG - 2011-12-13 14:44:28 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Template class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Config Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:44:28 --> URI Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Router Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Output Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Security Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Input Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:28 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:44:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:44:28 --> Language Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:44:28 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Session Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:44:28 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> A session cookie was not found.
+DEBUG - 2011-12-13 14:44:28 --> Session routines successfully run
+DEBUG - 2011-12-13 14:44:28 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Template class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:28 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:44:28 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:44:28 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:44:28 --> Final output sent to browser
+DEBUG - 2011-12-13 14:44:28 --> Total execution time: 0.0847
+DEBUG - 2011-12-13 14:44:31 --> Config Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:44:31 --> URI Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Router Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Output Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Security Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Input Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:31 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:44:31 --> CSRF token verified 
+DEBUG - 2011-12-13 14:44:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:44:31 --> Language Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:44:31 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:44:32 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Session Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:44:32 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Session routines successfully run
+DEBUG - 2011-12-13 14:44:32 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Template class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Config Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:44:32 --> URI Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Router Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Output Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Security Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Input Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:32 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:44:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:44:32 --> Language Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:44:32 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Session Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:44:32 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Session routines successfully run
+DEBUG - 2011-12-13 14:44:32 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Template class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:32 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:44:32 --> File loaded: ../application/views/microsite/index.php
+DEBUG - 2011-12-13 14:44:32 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:44:32 --> Final output sent to browser
+DEBUG - 2011-12-13 14:44:32 --> Total execution time: 0.0911
+DEBUG - 2011-12-13 14:44:55 --> Config Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:44:55 --> URI Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Router Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Output Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Security Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Input Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:44:55 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:44:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:44:55 --> Language Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:44:55 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Session Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:44:55 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Session routines successfully run
+DEBUG - 2011-12-13 14:44:55 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Template class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Model Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:44:55 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:44:55 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:44:55 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:44:55 --> Final output sent to browser
+DEBUG - 2011-12-13 14:44:55 --> Total execution time: 0.0881
+DEBUG - 2011-12-13 14:45:01 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:01 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:01 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:01 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:01 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:01 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:01 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:01 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:01 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:45:01 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:01 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:01 --> Total execution time: 0.0930
+DEBUG - 2011-12-13 14:45:20 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:20 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:20 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:20 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:20 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:20 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:20 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:20 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:20 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:45:20 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:20 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:20 --> Total execution time: 0.0940
+DEBUG - 2011-12-13 14:45:28 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:28 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:28 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:28 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:28 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:28 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:28 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:28 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:29 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:29 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:29 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> A session cookie was not found.
+DEBUG - 2011-12-13 14:45:29 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:29 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:29 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:29 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:45:29 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:29 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:29 --> Total execution time: 0.0835
+DEBUG - 2011-12-13 14:45:33 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:33 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:33 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:33 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:33 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:33 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:33 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:33 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:33 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:45:33 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:33 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:33 --> Total execution time: 0.0799
+DEBUG - 2011-12-13 14:45:37 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:37 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:37 --> CSRF token verified 
+DEBUG - 2011-12-13 14:45:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:37 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:37 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:37 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:37 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:37 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:37 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:37 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:37 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:37 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:37 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:37 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:37 --> File loaded: ../application/views/microsite/index.php
+DEBUG - 2011-12-13 14:45:37 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:37 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:37 --> Total execution time: 0.0929
+DEBUG - 2011-12-13 14:45:54 --> Config Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Hooks Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Utf8 Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> UTF-8 Support Enabled
+DEBUG - 2011-12-13 14:45:54 --> URI Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Router Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Output Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Security Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Input Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> XSS Filtering completed
+DEBUG - 2011-12-13 14:45:54 --> CRSF cookie Set
+DEBUG - 2011-12-13 14:45:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-12-13 14:45:54 --> Language Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Loader Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: cookie_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: url_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: form_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: html_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: debug_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: display_errors_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: to_date_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: display_flag_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: display_country_name_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: to_time_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: embed_youtube_helper
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: youtube_video_image_helper
+DEBUG - 2011-12-13 14:45:54 --> Database Driver Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Session Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: string_helper
+DEBUG - 2011-12-13 14:45:54 --> Encrypt Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Session routines successfully run
+DEBUG - 2011-12-13 14:45:54 --> User Agent Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Template class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Form Validation Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Model Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Upload Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Controller Class Initialized
+DEBUG - 2011-12-13 14:45:54 --> Helper loaded: inflector_helper
+DEBUG - 2011-12-13 14:45:54 --> File loaded: ../application/views/login/index.php
+DEBUG - 2011-12-13 14:45:54 --> File loaded: ../application/views/layouts/default.php
+DEBUG - 2011-12-13 14:45:54 --> Final output sent to browser
+DEBUG - 2011-12-13 14:45:54 --> Total execution time: 0.0936
