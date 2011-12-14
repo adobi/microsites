@@ -92,7 +92,8 @@
 	        self.raty({
 	            path: App.URL + 'scripts/plugins/raty/img/',
 	            start: self.attr('data-rate'),
-	            scoreName: 'rate', 
+	            scoreName: 'rate',
+	            half: true, 
             });
 	    });
 	    
@@ -102,7 +103,8 @@
 	        self.raty({
 	            path: App.URL + 'scripts/plugins/raty/img/',
 	            start: self.attr('data-rate'), 
-	            readOnly:true
+	            readOnly:true,
+	            half:true,
             });
 	    });
 	    

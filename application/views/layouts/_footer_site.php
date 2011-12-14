@@ -68,7 +68,8 @@
                 	        self.raty({
                 	            path: BASE_URL + 'scripts/plugins/raty/img/',
                 	            start: self.attr('data-rate'), 
-                	            readOnly:true
+                	            readOnly:true,
+                	            half:  true,
                             });
                 	    });                            
                         

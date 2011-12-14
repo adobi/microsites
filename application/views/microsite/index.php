@@ -11,7 +11,7 @@
                 <h3><?php echo $item->name ?></h3>
                 <p><?php echo $item->title ?></p>
                 <p class="item-nav">
-                    <a href="<?php echo base_url() ?>s/<?php echo $item->url ?>" target = "_blank"><strong>preview</strong></a>
+                    <a href="<?php echo base_url() ?>social/<?php echo $item->url ?>" target = "_blank"><strong>preview</strong></a>
 
                     <a href="<?php echo base_url() ?>microsite/stores/<?php echo $item->id ?>">stores</a>
                     <a href="<?php echo base_url() ?>microsite/reviews/<?php echo $item->id ?>">reviews</a>

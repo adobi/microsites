@@ -16,7 +16,10 @@ class Site extends MY_Controller
     public function show()
     {
         $data = array();
-        
+        if (isset($_GET['tabs_added'])) {
+            echo '<script>window.close()</script>';
+            die;
+        }
         $this->load->model('Microsites', 'site');
         $this->load->model('Images', 'image');
         $this->load->model('Videos', 'video');
@@ -34,6 +37,11 @@ class Site extends MY_Controller
         }
         
         $this->template->build('site/show', $data);
+    }
+    
+    public function redirect()
+    {
+        redirect('https://apps.facebook.com/'.$this->uri->segment(3));
     }
     
     public function video()
