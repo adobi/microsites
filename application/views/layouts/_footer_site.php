@@ -20,7 +20,7 @@
     	                value = parseInt(elem.attr('data-ga-value'),10),
     	                nonInteraction = elem.attr('data-ga-noninteraction');
                     
-                    console.log(category, action, label, value, nonInteraction);
+                    //console.log(category, action, label, value, nonInteraction);
         	        if (category && action && label && value) {
         	            
             	        if (nonInteraction == '1') {
@@ -82,11 +82,14 @@
                 	        return true;
                 	    });
                 	    
-                	    $('body').delegate('.video-play', 'click', function() {
+                	    $('body').delegate('.video-play, .youtube-image', 'click', function() {
                 	        var self = $(this);
                 	        
                 	        GA.track(self);
-                	        
+                	        if (self.is('.youtube-image')) {
+                	            //alert('youtube image')
+                	            self = self.parent();
+                	        }
                 	        self.load(BASE_URL+'site/video/'+self.attr('data-video-id'));
                 	        
                 	        return false;
