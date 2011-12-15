@@ -149,7 +149,8 @@
 */
 
 .game-info h1 {
-    text-align:center;
+    text-align:left;
+    padding-left:10px;
     margin-bottom:0px;
 }
 
