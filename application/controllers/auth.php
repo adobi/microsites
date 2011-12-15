@@ -13,6 +13,11 @@ class Auth extends MY_Controller
     
     public function login() 
     {
+        if ($this->session->userdata('logged_in')) {
+            
+            redirect(base_url().'microsite');
+        }
+        
         $data = array();
         
        

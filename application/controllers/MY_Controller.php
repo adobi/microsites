@@ -15,7 +15,6 @@ class MY_Controller extends CI_Controller
         if ($this->uri->segment(1) !== 'auth' && ($this->uri->segment(1) !== 'social' && $this->uri->segment(1) !== 'site' ) && !$this->session->userdata('logged_in')) {
             
             redirect(base_url() . 'auth/login');
-            
         }
     }
 }

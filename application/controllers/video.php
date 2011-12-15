@@ -41,6 +41,8 @@ class Video extends MY_Controller
         $data['site'] = $site;        
         $data['item'] = $item;
         
+        $this->form_validation->set_rules('video', 'Embed code', 'trim|required');
+        
         if ($this->form_validation->run()) {
 
            
@@ -55,16 +57,11 @@ class Video extends MY_Controller
                 $this->model->insert($_POST);
             }
         
-            if ($id) {
-                $this->model->update($_POST, $id);
-            } else {
-                $this->model->insert($_POST);
-            }
-            redirect($_SERVER['HTTP_REFERER']);
+            redirect(base_url() . 'microsite/videos/'. $site);
         } else {
             if ($_POST) {
                 
-                redirect($_SERVER['HTTP_REFERER']);
+                //redirect($_SERVER['HTTP_REFERER']);
             }
         }
         
