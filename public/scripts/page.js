@@ -109,8 +109,8 @@
 	    });
 	    
 	    $('.separator, .separator label').css('cursor', 'pointer');
-	    $('.section-content').hide();
-	    $('.section-content:first').show();
+	    //$('.section-content').hide();
+	    //$('.section-content:first').show();
 	    $('body').delegate('.separator', 'click', function() {
 	        //$('.section-content').hide();
 	        $(this).next('.section-content:first').toggle();
@@ -235,11 +235,12 @@
             
             return false;
         });        
-        /*
-        $('#image-sortable').masonry({
-            itemSelector : '.sortable-item',
-        });        			     
-        */
+        
+        $('.pills').pills();
+        
+        if ($('#redactor').length)
+            $('#redactor').redactor({ lang: 'en' });
+	        
 	})
 	
 }) (jQuery);

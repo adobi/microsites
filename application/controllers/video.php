@@ -23,15 +23,37 @@ class Video extends MY_Controller
         
         $id = $this->uri->segment(3);
         
-        $this->load->model('', 'model');
-        
-        $item = false;
-        if ($id) {
+        $this->load->model('Videos', 'model');
+
+        $item = false; $site = false;
+        if ($id && is_numeric($id)) {
             $item = $this->model->find((int)$id);
+            
+            if (is_numeric($this->uri->segment(5))) {
+                $site = $this->uri->segment(5);
+            }
+        } else {
+            if (is_numeric($this->uri->segment(4))) {
+                $site = $this->uri->segment(4);
+            }
         }
+        
+        $data['site'] = $site;        
         $data['item'] = $item;
         
         if ($this->form_validation->run()) {
+
+           
+            if (!isset($_POST['ga_noninteraction'])) {
+                $_POST['ga_noninteraction'] = null;
+            }
+            
+            if ($id && is_numeric($id)) {
+                $this->model->update($_POST, $id);
+            } else {
+                $_POST['site_id'] = $site;
+                $this->model->insert($_POST);
+            }
         
             if ($id) {
                 $this->model->update($_POST, $id);
@@ -46,7 +68,9 @@ class Video extends MY_Controller
             }
         }
         
-        $this->template->build('/edit', $data);
+        $this->template->set_partial('event_tracking', '_partials/event_tracking');
+        
+        $this->template->build('video/edit', $data);
     }
     
     public function delete()

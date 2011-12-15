@@ -48,7 +48,7 @@
                 color: <?php echo $site->font_color ?>;
             }
             
-            .content a {
+            .content a, .game-info a {
                 color: <?php echo $site->link_color ?>!important;
             }
             
@@ -121,7 +121,7 @@
     <?php endif ?>
     
     <body>  
-        <?php if ($site->app_id): ?>
+        <?php if (isset($site->app_id)): ?>
             
             <div id="fb-root"></div>
             <script>
@@ -147,7 +147,7 @@
             </script>        
         <?php endif ?>
             
-        <?php if ($site->ga_code): ?>
+        <?php if (isset($site->ga_code)): ?>
             <script type="text/javascript">
                 <?php echo $site->ga_code ?>
             </script>

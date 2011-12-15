@@ -54,7 +54,7 @@
         	    <div class="span8 game-info">
         	        <h1 class="game-title"><?php echo $site->name ?></h1>
         	        <h2 class="section-title"><?php echo $site->title ?></h2>
-        	        <p><?php echo $site->description ?></p>
+        	        <div style="padding:5px;"><?php echo $site->description ?></div>
         	    </div>
         	    <?php if (isset($stores) && $stores): ?>
                     <div class="span9 available-on">

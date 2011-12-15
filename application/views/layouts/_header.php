@@ -14,6 +14,9 @@
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tabs.js"></script>
     
+    	<script src="<?php echo base_url() ?>scripts/plugins/redactor/js/redactor/redactor.js"></script>
+    	<link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/redactor/js/redactor/css/redactor.css" />             
+        
     </head>
     
     <body>    
