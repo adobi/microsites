@@ -18,6 +18,10 @@
      background-repeat: no-repeat;
 }
 
+.game-title {
+	padding-left:10px;
+}
+
 .site-header {
     width:510px;
     height:120px;
