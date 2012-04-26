@@ -55,12 +55,12 @@
             	        <?php endif ?>
             	    </div>
         	    </div>
-        	    <p style="text-align:center">
+        	    <p style="text-align:center; margin-top:10px;">
                     <a class = "btn" href="#" onclick=window.open("http://www.facebook.com/dialog/pagetab?app_id=<?php echo $site->app_id ?>&display=popup&next=<?php echo base_url() ?>social/<?php echo $site->url ?>/","PageTab","width=500,height=200");>Add to my page</a>
         	        
         	    </p>
+				<h1 class="game-title"><?php echo $site->name ?></h1>
         	    <div class="span8 game-info">
-        	        <h1 class="game-title"><?php echo $site->name ?></h1>
         	        <h2 class="section-title"><?php echo $site->title ?></h2>
         	        <div style="padding:5px;"><?php echo $site->description ?></div>
         	    </div>
