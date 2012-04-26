@@ -30,9 +30,9 @@ class Microsite extends MY_Controller
         
         $this->load->model('Microsites', 'sites');
         
-        $data['item'] = false;
+        $data['site'] = false;
         if ($id) {
-            $data['item'] = $this->sites->find($id);
+            $data['site'] = $this->sites->find($id);
         }
         
         $this->form_validation->set_rules('name', 'Name', 'trim|required');
@@ -81,11 +81,11 @@ class Microsite extends MY_Controller
         $id = $this->uri->segment(3);
         
         if ($id) {
-            
+            $this->_deleteSiteImages($id);
             $this->_deleteImage($id, true);
         }
         
-        redirect($_SERVER['HTTP_REFERER']);        
+        redirect('microsite');        
     }
     
     public function images()
@@ -236,31 +236,8 @@ class Microsite extends MY_Controller
     {
         $id = $this->uri->segment(3);
         
-        $this->load->model('Images', 'model');
-        if (is_numeric($id)) {
-            // delete by id, from db too
-            
-            $item = $this->model->find($id);
-            
-            $file = $item->image;
-            
-            $this->model->delete($id);
-            
-        } else {
-            // delete only the file
-            
-            $file = $id;
-        }
+        $this->_deleteSiteImage($id);
         
-        $this->load->config('upload');
-        
-        if ($file) {
-            
-            @unlink($this->config->item('upload_path_base') . $file);
-            @unlink($this->config->item('upload_path_base') . 'thumbs/' . $file);
-            //@unlink($this->config->item('upload_path') . $file);
-            
-        }
         redirect($_SERVER['HTTP_REFERER']);
     }
     
@@ -304,11 +281,55 @@ class Microsite extends MY_Controller
         redirect($_SERVER['HTTP_REFERER']);        
     }
     
+    private function _deleteSiteImage($id)
+    {
+      $this->load->model('Images', 'model');
+      if (is_numeric($id)) {
+          // delete by id, from db too
+          
+          $item = $this->model->find($id);
+          
+          $file = $item->image;
+          
+          $this->model->delete($id);
+          
+      } else {
+          // delete only the file
+          
+          $file = $id;
+      }
+      
+      $this->load->config('upload');
+      
+      if ($file) {
+          
+          @unlink($this->config->item('upload_path_base') . $file);
+          @unlink($this->config->item('upload_path_base') . 'thumbs/' . $file);
+          @unlink($this->config->item('upload_path') . $file);
+          
+      }
+    }
+    
+    private function _deleteSiteImages($site) 
+    {
+      $this->load->model('Images', 'model');
+      
+      $images =  $this->model->fetchForSite($site);
+      
+      if (!$images) return false;
+      
+      foreach ($images as $image) {
+        $this->_deleteSiteImage($image->id);
+      }
+    }
+    
     private function _deleteImage($id, $withRecord = false) 
     {
-        $this->load->model('Microsites', 'model');
+        $this->load->model('Microsites', 'sites');
         
-        $item = $this->model->find($id);
+        $item = $this->sites->find($id);
+        
+        //dump($id); die;
         
         if ($item && $item->background_image) {
             $this->load->config('upload');
@@ -318,9 +339,9 @@ class Microsite extends MY_Controller
         
         if (!$withRecord) {
             
-            $this->model->update(array('background_image'=>null), $id);
+            $this->sites->update(array('background_image'=>null), $id);
         }
         
-        return $withRecord ? $this->model->delete($id) : true;
+        return $withRecord ? $this->sites->delete($id) : true;
     }
 }

@@ -33,10 +33,11 @@
                     <li class="<?php echo in_array($this->uri->segment(1), array('', 'microsite', 'review')) ? 'active' : '' ?>">
                         <a href="<?php echo base_url() ?>microsite">Sites</a>
                     </li>
+          <!-- 
 					<li <?php echo $this->uri->segment(1) === 'storetype' ? 'class = "active"' : '' ?>>
 						<a href="<?php echo base_url() ?>storetype">Stores</a>
 					</li>
-                    
+           -->     
 					<li <?php echo $this->uri->segment(2) === 'logout' ? 'class = "active"' : '' ?>>
 						<a href="<?php echo base_url() ?>auth/logout">Logout</a>
 					</li>
@@ -47,4 +48,21 @@
                     //jQuery('#main-nav').dropdown()
                 })
             </script>
+        <?php endif ?>
+        
+        <?php if ($this->uri->segment(1) === 'microsite' && ($this->uri->segment(2) !== 'index' || !$this->uri->segment(2)) && isset($site)): ?>
+          <div class="well">
+            <h6>Other options for <?php echo $site->name ?></h6>
+            <p class="item-nav" style="margin-right:0; text-align:left">
+                <a href="<?php echo base_url() ?>social/<?php echo $site->url ?>" target = "_blank"><strong>preview</strong></a>
+        
+                <a href="<?php echo base_url() ?>microsite/stores/<?php echo $site->id ?>">stores</a>
+                <a href="<?php echo base_url() ?>microsite/reviews/<?php echo $site->id ?>">reviews</a>
+                <a href="<?php echo base_url() ?>microsite/images/<?php echo $site->id ?>">images</a>
+                <a href="<?php echo base_url() ?>microsite/videos/<?php echo $site->id ?>">videos</a>
+                
+                <a href="<?php echo base_url() ?>microsite/edit/<?php echo $site->id ?>">edit</a>
+                <a href="<?php echo base_url() ?>microsite/delete/<?php echo $site->id ?>">delete</a>
+            </p>      
+          </div>          
         <?php endif ?>

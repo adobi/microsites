@@ -433,4 +433,60 @@ class My_Model extends CI_Model
 	    
 	    return $ret;
 	}
+	
+	public function truncate() 
+	{
+	  return $this->db->truncate($this->_name);
+	}	
+	
+    
+  /**  
+   * get an image from the remote 
+   *
+   * @param string $url 
+   * @param string $name 
+   * @return string the name of the loaded image
+   * @author Dobi Attila
+   */
+  protected function _getImageFromUrl($url, $name)
+  {
+    if ($url && $name) {
+      
+      $imageBinary = file_get_contents($url);
+      
+      $this->config->load('upload');
+      
+      $image = time().'_'.$name;
+      //file_put_contents($this->config->item('upload_path_base').$image, $imageBinary);
+      file_put_contents($this->config->item('upload_path').$image, $imageBinary);
+      
+      return $image;
+    } 
+    
+    return false;
+  }	
+  
+  protected function _deleteImage($element, $col, $withRecord = false) 
+  {
+      if (is_numeric($element))
+        $item = $this->find($element);
+      else $item = $element;
+      
+      $id = $item->id;
+        
+      //dump($id); die;
+      
+      if ($item && $item->$col) {
+          $this->load->config('upload');
+          
+          @unlink($this->config->item('upload_path') . $item->$col);
+      }
+      
+      if (!$withRecord) {
+          
+          $this->update(array($col=>null), $id);
+      }
+      
+      return $withRecord ? $this->delete($id) : true;
+  }  
 }

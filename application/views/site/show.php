@@ -3,6 +3,14 @@
             <img src="<?php echo base_url() ?>images/404.jpg" alt="">
         </div>
     <?php else: ?>
+        <?php if ($this->session->userdata('logged_in')): ?>
+          <div class="container" style="padding-bottom:0">
+            <div  style="padding:20px;">
+              <a class="btn primary" href="<?php echo base_url() ?>microsite/edit/<?php echo $site->id ?>">Edit microsite</a>
+              <a class="btn" href="<?php echo base_url() ?>microsite/edit/<?php echo $site->id ?>">Delete microsite</a>
+            </div>
+          </div>
+        <?php endif ?>
         <div class="container span8" id="top">
         	<div class="content">
         	    <div class="span8 site-header"></div>
@@ -39,7 +47,7 @@
                                     <!-- 
                                     <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                                      -->
-                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
+                                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
                                     <!-- </a> -->
                                 </div>                                                              	            
             	            <?php endforeach ?>

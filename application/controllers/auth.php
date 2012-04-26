@@ -21,15 +21,36 @@ class Auth extends MY_Controller
         $data = array();
         
        
-        if ($_POST && md5($_POST['password']) === md5('a')) {
+      if ($_POST && md5($_POST['password']) === md5('a')) {
 			
-			$this->session->set_userdata('logged_in', true);
-			
-			redirect(base_url() . 'microsite');
-		}
-        
+  			$this->session->set_userdata('logged_in', true);
+  			
+  			$this->load->model('Storetypes', 'types');
+  			
+  			$this->types->loadFromRemote();
+  			
+  			redirect(base_url() . 'microsite');
+  		}
+          
         $this->template->build('login/index', $data);
     }
+    
+    public function auto_login()
+    {
+      $redirect = $_GET['r'];
+
+  		$this->load->model('Storetypes', 'types');
+  		
+  		$this->types->loadFromRemote();
+      
+      if (isset($redirect)) {
+
+        $this->session->set_userdata('logged_in', true);
+        redirect($redirect);
+      }
+      
+      redirect(base_url() . 'microsite');
+    }    
     
     public function logout()
     {

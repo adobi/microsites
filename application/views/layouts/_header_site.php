@@ -36,7 +36,8 @@
             
             <?php if ($site->game_title_color): ?>
                 .game-title {
-                    color: <?php echo $site->game_title_color ?>;
+                    color: <?php echo $site->game_title_color ?>!important;
+					
                 }
             <?php endif ?>            
             

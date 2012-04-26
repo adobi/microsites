@@ -75,7 +75,7 @@
                         
                 	    //$('.game-info h1, .available-on h2, .reviews h2').lettering();
                 	    
-                	    $('[data-ga=1]').bind('click', function() {
+                	    $('[data-ga=1]').bind('click, mousedown', function() {
                 	        var self = $(this);
                             
                 	        GA.track(self);
@@ -91,7 +91,13 @@
                 	            //alert('youtube image')
                 	            self = self.parent();
                 	        }
-                	        self.load(BASE_URL+'site/video/'+self.attr('data-video-id'));
+                	        
+                	        $.getJSON(BASE_URL+'site/video/'+self.attr('data-video-id')+'/?callback=?', function (response) {
+                            
+                            self.html(response.response)
+                          })
+                	        
+                	        //self.load(BASE_URL+'site/video/'+self.attr('data-video-id'));
                 	        
                 	        return false;
                 	    });

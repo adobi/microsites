@@ -46,7 +46,12 @@ class Site extends MY_Controller
     
     public function video()
     {
-        echo embed_youtube($this->uri->segment(3), true);
+      $response = json_encode(array('response'=>embed_youtube($this->uri->segment(3), true)));
+      if ($_GET['callback']) {
+        $callback = $_GET['callback'];
+        echo "$callback($response)";
+      }
+      else echo ($response);
         die;
     }
     

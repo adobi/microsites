@@ -10,7 +10,7 @@
         <div class="clearfix">
             <label>Image</label>
             <div class="input">
-                <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt=""  style="width:210px; height:150px; ">
+                <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->image ?>" alt=""  style="width:210px; height:150px; ">
             </div>        
         </div>
         
