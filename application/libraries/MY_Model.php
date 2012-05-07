@@ -433,12 +433,6 @@ class My_Model extends CI_Model
 	    
 	    return $ret;
 	}
-	
-	public function truncate() 
-	{
-	  return $this->db->truncate($this->_name);
-	}	
-	
     
   /**  
    * get an image from the remote 
@@ -489,4 +483,22 @@ class My_Model extends CI_Model
       
       return $withRecord ? $this->delete($id) : true;
   }  
+
+	
+	public function bulk_insert($data) 
+	{
+	  if (!is_array($data)) return false;
+	  
+	  foreach ($data as $d) {
+	    if ($d)
+	      $this->insert($d);
+	  }
+	  
+	  return true;
+	}	
+	
+	public function truncate() 
+	{
+	  return $this->db->truncate($this->_name);
+	}  
 }

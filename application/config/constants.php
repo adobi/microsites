@@ -46,8 +46,8 @@ define('FACEBOOK_PAYMENT_APP_ID', '239232439472925');
 define('FACEBOOK_PAYMENT_APP_SECRET', '0d405b0cc29d777204609a755dfe198f');
 
 define('INVICTUS_URL', 'http://localhost/invictus.com/app/public/');
-define('INVICTUS_API_URL', INVICTUS_URL.'api/');
-define('INVICTUS_API_PLAFTORMS_URL', INVICTUS_API_URL.'platforms');
+define('INVICTUS_API_URI', INVICTUS_URL.'api/');
+define('INVICTUS_API_PLAFTORMS_URL', INVICTUS_API_URI.'platforms');
 
 
 

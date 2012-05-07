@@ -26,6 +26,7 @@ class Microsites extends MY_Model
       $insertData = array(
         'name'=>$data['name'],
         'title'=>$data['name'],
+        'description'=>$data['description'],
         'url'=>$data['url'],
       );
       
@@ -44,7 +45,8 @@ class Microsites extends MY_Model
         $this->load->model('Images', 'images');
         foreach ($data['images'] as $i=>$image) {
           
-          $img = $this->_getImageFromUrl($image['image'], $image['image_name']);
+          if ($image['image'] && $image['image_name'])
+            $img = $this->_getImageFromUrl($image['image'], $image['image_name']);
           
           $d = array();
           $d['site_id'] = $inserted;

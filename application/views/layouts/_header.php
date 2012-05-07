@@ -50,7 +50,7 @@
             </script>
         <?php endif ?>
         
-        <?php if ($this->uri->segment(1) === 'microsite' && ($this->uri->segment(2) !== 'index' || !$this->uri->segment(2)) && isset($site)): ?>
+        <?php if ($this->uri->segment(1) === 'microsite' && ($this->uri->segment(2) !== 'index' || !$this->uri->segment(2)) && isset($site) && $site): ?>
           <div class="well">
             <h6>Other options for <?php echo $site->name ?></h6>
             <p class="item-nav" style="margin-right:0; text-align:left">

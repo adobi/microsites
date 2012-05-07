@@ -17,27 +17,41 @@ class Storetypes extends MY_Model
         return $this->execute('select * from store_type where id not in (select type_id from store where site_id = '.$site.')');
     }
     
-    public function loadFromRemote()
+    public function initFromApi()
     {
-      $platforms = json_decode(file_get_contents(INVICTUS_API_PLAFTORMS_URL));
       
-      if (!$platforms) return false;
+      $data = $this->invictus->setUri(INVICTUS_API_URI)->setAction('platforms')->get(true);
+      
+      //dump($data); die;
+      
+      if (!$data) return false;
+      
+      foreach ($data as &$item) {
+        //unset($item['image']);
+        //unset($item['image_name']);
+        $item['url'] = $this->sanitizer->sanitize_title_with_dashes($item['name']);
+      }
       
       $local = $this->fetchAll();
       foreach ($local as $item) {
         $this->_deleteImage($item, 'logo', true);
       }
       
+      $this->truncate();
+      
+      //$this->bulk_insert($data);
+      
+      
       //$this->truncate();
       
-      foreach ($platforms as $item) {
-        $data = array(
-          'id'=>$item->id,
-          'name'=>$item->name,
-          'logo'=>$this->_getImageFromUrl($item->image, $item->image_name)
+      foreach ($data as $item) {
+        $d = array(
+          'id'=>$item['id'],
+          'name'=>$item['name'],
+          'logo'=>$this->_getImageFromUrl($item['image'], $item['image_name'])
           );
         
-        $this->insert($data);
+        $this->insert($d);
       }
     }
 }

@@ -27,7 +27,11 @@ class Auth extends MY_Controller
   			
   			$this->load->model('Storetypes', 'types');
   			
-  			$this->types->loadFromRemote();
+  			$this->types->initFromApi();
+  			
+        //$this->load->model('Games', 'games');
+        //$this->games->initFromApi();
+          			
   			
   			redirect(base_url() . 'microsite');
   		}
@@ -41,7 +45,7 @@ class Auth extends MY_Controller
 
   		$this->load->model('Storetypes', 'types');
   		
-  		$this->types->loadFromRemote();
+  		$this->types->initFromApi();
       
       if (isset($redirect)) {
 
