@@ -21,7 +21,7 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
     
     //echo '<pre>'; print_r($_SERVER);
     
-    $config['base_url']	= 'https://microsites.orchestra.io/';//(@$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https' : 'http') . '://morning-leaf-2304.herokuapp.com/public/';
+    $config['base_url']	= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'https' ? 'https' : 'http').'://invictus.com/microsites/';//(@$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https' : 'http') . '://morning-leaf-2304.herokuapp.com/public/';
 }
 
 /*
@@ -188,7 +188,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 1;
 
 /*
 |--------------------------------------------------------------------------
@@ -301,11 +301,10 @@ $config['global_xss_filtering'] = true;
 | 'csrf_cookie_name' = The cookie name
 | 'csrf_expire' = The number in seconds the token should expire.
 */
-$config['csrf_protection'] = true;
+$config['csrf_protection'] = false;
 $config['csrf_token_name'] = 'csrf_test_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
 $config['csrf_expire'] = 7200;
-$config['csrf_exclude_uris'] = array('api/create');
 
 /*
 |--------------------------------------------------------------------------

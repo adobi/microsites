@@ -47,7 +47,7 @@
                                     <!-- 
                                     <a rel = "fancybox" href="<?php echo base_url() ?>uploads/<?php echo $item->image ?>">
                                      -->
-                                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
+                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" title = "" height="340"  class="max-width: 450px;">
                                     <!-- </a> -->
                                 </div>                                                              	            
             	            <?php endforeach ?>

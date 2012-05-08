@@ -105,7 +105,7 @@
                   <span class="span3" style="width:290px;display:inline-block; text-align:center;">
                       <a href="#" style="margin-left:0px; max-width:280px; width:100%" class="media-a">
                           <span style="display:inline-block; max-width:280px; height:210px;">
-                            <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->image ?>" alt="" class="thumbnail" style="width: 280px"/>
+                            <img src="<?php echo base_url() ?>uploads/<?php echo $item->image ?>" alt="" class="thumbnail" style="max-width: 280px; height:210px"/>
                           </span>
                       </a>
                   </span>
