@@ -7,7 +7,7 @@
           <div class="container" style="padding-bottom:0">
             <div  style="padding:20px;">
               <a class="btn primary" href="<?php echo base_url() ?>microsite/edit/<?php echo $site->id ?>">Edit microsite</a>
-              <a class="btn" href="<?php echo base_url() ?>microsite/edit/<?php echo $site->id ?>">Delete microsite</a>
+              <a class="btn" href="<?php echo base_url() ?>microsite/delete/<?php echo $site->id ?>">Delete microsite</a>
             </div>
           </div>
         <?php endif ?>

@@ -26,7 +26,7 @@ class Microsites extends MY_Model
       $insertData = array(
         'name'=>$data['name'],
         'title'=>$data['name'],
-        'description'=>$data['description'],
+        'description'=>nl2br($data['description']),
         'url'=>$data['url'],
       );
       

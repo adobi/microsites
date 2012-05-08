@@ -452,7 +452,7 @@ class My_Model extends CI_Model
       
       $image = time().'_'.$name;
       //file_put_contents($this->config->item('upload_path_base').$image, $imageBinary);
-      file_put_contents($this->config->item('upload_path').$image, $imageBinary);
+      file_put_contents($this->config->item('upload_path_base').$image, $imageBinary);
       
       return $image;
     } 
