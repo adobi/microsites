@@ -94,6 +94,7 @@ class Microsites extends MY_Model
           $p['ga_category'] = "Outbound link";
           $p['ga_value'] = 1;
           foreach ($data['platforms'] as $i=>$item) {
+            $p['label'] = $item->name;
             $p['type_id'] = $item;
             $p['url'] = $data['urls'][$i];
             $type = $this->types->find($item);

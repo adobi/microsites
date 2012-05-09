@@ -78,7 +78,7 @@
                                         data-ga-value = "<?php echo $item->ga_value ?>" 
                                         data-ga-noninteraction = "<?php echo $item->ga_noninteraction ?>"
                                     >
-                                        <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->logo ?>" alt="">
+                                        <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
                                     </a>
                                     <?php if ($item->label): ?>
                                         

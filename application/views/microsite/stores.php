@@ -23,7 +23,7 @@
                         <p style="text-align:center"><strong><?php echo $item->label ? $item->label : '&nbsp;' ?></strong></p>
                         <p style="text-align:center">
                             <a href="<?php echo $item->url ?>" target = "_blank">
-                                <img src="<?php echo base_url() ?>uploads/original/<?php echo $item->logo ?>" alt="">
+                                <img src="<?php echo base_url() ?>uploads/<?php echo $item->logo ?>" alt="">
                             </a>
                         </p> 
                         <p class="item-nav">

@@ -41,17 +41,18 @@ class Auth extends MY_Controller
     
     public function auto_login()
     {
-      $redirect = $_GET['r'];
 
   		$this->load->model('Storetypes', 'types');
   		
   		$this->types->initFromApi();
       
-      if (isset($redirect)) {
+      $redirect = isset($_GET['r']) ? $_GET['r'] : false;
+      
+      if ($redirect) {
 
-        $this->session->set_userdata('logged_in', true);
         redirect($redirect);
       }
+      $this->session->set_userdata('logged_in', true);
       
       redirect(base_url() . 'microsite');
     }    
