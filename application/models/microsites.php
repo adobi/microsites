@@ -52,9 +52,9 @@ class Microsites extends MY_Model
           $d['site_id'] = $inserted;
           $d['image'] = $img;
           $d['order'] = ($i+1);
-          $d['ga_category'] = 'image';
-          $d['ga_action'] = 'view';
-          $d['ga_label'] = $data['name'].' - ' . $img;
+          $d['ga_category'] = 'Image';
+          $d['ga_action'] = 'View';
+          $d['ga_label'] = $data['name'].' - ' . $img . ' - ' . time();
           $d['ga_value'] = 1;
           
           $this->images->insert($d);
@@ -73,9 +73,9 @@ class Microsites extends MY_Model
           $d['video'] = $video;
           $d['title'] = $data['name'];
           $d['order'] = ($i+1);
-          $d['ga_category'] = 'video';
-          $d['ga_action'] = 'play';
-          $d['ga_label'] = $data['name'].' - ' . $video;
+          $d['ga_category'] = 'Video';
+          $d['ga_action'] = 'Play';
+          $d['ga_label'] = $data['name'].' - ' . $data['name'] . ' '. $video . ' - ' . time();
           $d['ga_value'] = 1;
           
           $this->videos->insert($d);
@@ -91,13 +91,13 @@ class Microsites extends MY_Model
         if ($data['platforms']) {
           $p = array('site_id'=>$inserted);
           $p['ga_action'] = "Click";
-          $p['ga_category'] = "Outbound link";
+          $p['ga_category'] = "Outbound Link";
           $p['ga_value'] = 1;
           foreach ($data['platforms'] as $i=>$item) {
-            $p['label'] = $item->name;
             $p['type_id'] = $item;
             $p['url'] = $data['urls'][$i];
             $type = $this->types->find($item);
+            $p['label'] = $type->name;
             if ($type)
               $p['ga_label'] = $data['name']." - " . $type->name;
               

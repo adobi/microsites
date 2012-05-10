@@ -16,7 +16,7 @@
     <fieldset>
         <legend>Stores for <?php echo $site->name ?></legend>
         <ul class="pills" data-pills="pills">
-            <li class="active"><a href="#store">Review</a></li>
+            <li class="active"><a href="#store">Stores</a></li>
             <li><a href="#analytics">Analytics</a></li>
         </ul>          
         <?php echo form_open() ?>
